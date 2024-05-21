@@ -1,20 +1,30 @@
-import { Container, Row, Col, Nav, Navbar } from 'react-bootstrap';
+import { Container, Row, Col, Nav, Navbar, Image } from 'react-bootstrap';
+import ProgrammerLogo from '../images/ProgrammerLogo.png';
+
 import '../assets/Header.css';
 
 const Header = () => {
     return (
         <header>
-            <Container className='py-3'>
+            <Container className='py-2'>
                 <Row className='d-flex align-items-center'>
-                    <Col>
-                        <h1>Imagem de alguma coisa</h1>
+                    <Col className='d-flex align-items-start'>
+                        <Row>
+                            <Col className='d-flex justify-content-end'>
+                                <Image src={ProgrammerLogo} style={{ height: '60px' }}></Image>
+                            </Col>
+                            <Col className='d-flex align-items-end'>
+                                <h1 className='cormorant'>Thales.dev</h1>
+                            </Col>
+                        </Row>
                     </Col>
                     <Col className='d-flex align-items-center justify-content-end'>
                         <Navbar>
                             <Nav>
-                                <Nav.Link href="#">Algo 1</Nav.Link>
-                                <Nav.Link href="#">Algo 2</Nav.Link>
-                                <Nav.Link href="#">Algo 3</Nav.Link>
+                                <Nav.Link className='me-4' href="#">Home</Nav.Link>
+                                <Nav.Link className='mx-4' href="#">Sobre mim</Nav.Link>
+                                <Nav.Link className='mx-4' href="#">Habilidades</Nav.Link>
+                                <Nav.Link className='ms-4' href="#">Projetos</Nav.Link>
                             </Nav>
                         </Navbar>
                     </Col>

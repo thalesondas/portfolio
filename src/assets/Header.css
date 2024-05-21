@@ -1,4 +1,22 @@
 header{
-    background-color: rgba(255, 228, 196, 0.3);
-    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid #000000;
+    color: white;
+}
+
+.nav-link{
+    font-size: 18px;
+    color: white !important;
+    background-image: linear-gradient(#afafaf, #afafaf);
+    background-size: 0% 0.1em;
+    background-position-y: 90%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    color: #afafaf !important;
+    background-size: 100% 0.1em;
 }

@@ -4,7 +4,7 @@ main{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(31, 25, 25);
+    background: linear-gradient(50deg, #bd161d, #000000);
     z-index: -1;
 }
 
