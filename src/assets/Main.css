@@ -19,6 +19,22 @@ main{
     animation: flutuar 5s linear infinite;
 }
 
+.cursor-digitacao{
+    animation: piscar 1s linear infinite;
+}
+
+@keyframes piscar {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @keyframes flutuar{
     0%{
         transform: translateY(0);
