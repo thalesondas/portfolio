@@ -4,10 +4,35 @@ main{
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(50deg, #bd161d, #000000);
+    background: linear-gradient(200deg, #510105, #000000);
     z-index: -1;
 }
 
-h2{
-    margin-top: 50px;
+.main-home-col1 h1{
+    color: white;
+    font-size: 44px;
+    line-height: 51px;
+}
+
+.main-home-col2 img{
+    width: 35%;
+    animation: flutuar 5s linear infinite;
+}
+
+@keyframes flutuar{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
