@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap'
+import RedesSociaisBotao from './RedesSociaisBotao';
 import '../assets/Main.css'
 import ProgrammerLogo from '../images/ProgrammerLogo.png';
 
@@ -53,7 +54,7 @@ const Main = () => {
         <main>
             <Container style={{paddingTop: '100px'}}>
                 <Row style={{ height: '629px'}}>
-                    <Col className='main-home-col1 d-flex justify-content-center align-items-center'>
+                    <Col className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
                         <h1>
                             Olá, eu sou<br />
                             <span>{texto}</span><span className={cursorDigitacao}>|</span><br />
@@ -61,6 +62,10 @@ const Main = () => {
                             Desenvolvedor Full Stack<br />
                             Analista de Dados
                         </h1>
+                        <div className='mt-4'>
+                            <RedesSociaisBotao texto='LinkedIn' />
+                            <RedesSociaisBotao texto='GitHub'/>
+                        </div>
                     </Col>
                     <Col className='main-home-col2 d-flex justify-content-center align-items-center'>
                         <Image src={ProgrammerLogo}></Image>
