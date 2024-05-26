@@ -53,7 +53,7 @@ const Main = () => {
     return(
         <main>
             <Container style={{paddingTop: '100px'}}>
-                <Row style={{ height: '629px'}}>
+                <Row style={{ height: '629px' }}>
                     <Col className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
                         <h1>
                             Olá, eu sou<br />
@@ -62,7 +62,7 @@ const Main = () => {
                             Desenvolvedor Full Stack<br />
                             Analista de Dados
                         </h1>
-                        <div className='mt-4'>
+                        <div className='mt-5'>
                             <RedesSociaisBotao texto='LinkedIn' />
                             <RedesSociaisBotao texto='GitHub'/>
                         </div>

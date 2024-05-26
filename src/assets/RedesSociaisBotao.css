@@ -1,9 +1,31 @@
 .btn{
     color: white !important;
+    border: 1px solid white;
     box-shadow: 0px 0px 7px whitesmoke;
+    transition: box-shadow 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .btn img{
     width: 40px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.btn-github:hover{
+    box-shadow: 0px 0px 30px #e6020e;
+    border: 1px solid #e6020e;
+    color: #ffcfd2 !important;
+}
+
+.btn-linkedin:hover{
+    box-shadow: 0px 0px 30px #0a66c2;
+    border: 1px solid #0a66c2;
+    color: #4ca4fb !important;
+}
+
+.btn-github:hover img {
+    filter: invert(85%) sepia(27%) saturate(1000%) hue-rotate(308deg) brightness(100%) contrast(100%);
+}
+
+.btn-linkedin:hover img{
+    filter: invert(20%) sepia(83%) saturate(1000%) hue-rotate(184deg) brightness(88%) contrast(94%);
 }
