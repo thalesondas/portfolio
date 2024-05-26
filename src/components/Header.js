@@ -6,7 +6,7 @@ import '../assets/Header.css';
 const Header = () => {
     return (
         <header>
-            <Container className='py-2'>
+            <Container className='py-2 px-5'>
                 <Row className='d-flex align-items-center'>
                     <Col className='d-flex align-items-start'>
                         <Row>
