@@ -1,0 +1,15 @@
+.img-habilidade{
+    width: 80px;
+}
+
+.container-habilidade{
+    padding: 12px 0px 12px 15px;
+    margin: 16px 0px;
+    border-radius: 20px;
+    width: 109px;
+    background-color: rgb(159, 157, 157);
+}
+
+.barra-vermelha{
+    color: red;
+}
