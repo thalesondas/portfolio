@@ -1,3 +1,7 @@
+.custom-width{
+    width: 142px;
+}
+
 .btn{
     color: white !important;
     border: 1px solid white;
@@ -22,10 +26,20 @@
     color: #4ca4fb !important;
 }
 
+.btn-curriculo:hover{
+    box-shadow: 0px 0px 30px #000000;
+    border: 1px solid #000000;
+    color: #bac7d1 !important;
+}
+
 .btn-github:hover img {
     filter: invert(85%) sepia(27%) saturate(1000%) hue-rotate(308deg) brightness(100%) contrast(100%);
 }
 
 .btn-linkedin:hover img{
     filter: invert(20%) sepia(83%) saturate(1000%) hue-rotate(184deg) brightness(88%) contrast(94%);
+}
+
+.btn-curriculo:hover img{
+    filter: hue-rotate(308deg) saturate(5) brightness(1.1);
 }

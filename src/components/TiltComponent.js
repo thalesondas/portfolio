@@ -6,8 +6,8 @@ const TiltComponent = () => {
     return (
         <Tilt
             style={{ width: '40%'}}
-            tiltMaxAngleX={9}
-            tiltMaxAngleY={9}
+            tiltMaxAngleX={10}
+            tiltMaxAngleY={10}
             perspective={2500}
         >
             <div className='tiltComponent'>
