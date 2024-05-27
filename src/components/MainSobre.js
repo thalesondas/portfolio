@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
+import TiltComponent from '../components/TiltComponent'
 import '../assets/MainSobre.css'
 
 const MainSobre = () => {
@@ -6,7 +7,7 @@ const MainSobre = () => {
         <Container className="main-sobre d-flex">
             <Row>
                 <Col md={5} className="d-flex justify-content-center align-items-center">
-                    <h1>*Imagem que será inserida*</h1>
+                    <TiltComponent />
                 </Col>
                 <Col md={7} className="main-sobre-col2 d-flex flex-column justify-content-center">
                     <h2 className="mb-4"><span className="barra-vermelha">|</span> Sobre mim</h2>
@@ -20,7 +21,7 @@ const MainSobre = () => {
                         meio de cursos online gratuitos e da plataforma Udemy.
                     </p>
                     <p>
-                        &emsp;Estou em busca da minha primeira oportunidade de trabalho nessa área para poder continuat aprimorando 
+                        &emsp;Estou em busca da minha primeira oportunidade de trabalho nessa área para poder continuar aprimorando 
                         minhas habilidades e poder ajudar a empresa com meus conhecimentos.
                     </p>
                 </Col>
