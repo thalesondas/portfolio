@@ -21,9 +21,9 @@ const Header = () => {
                     <Col className='d-flex align-items-center justify-content-end'>
                         <Navbar>
                             <Nav>
-                                <Nav.Link className='me-4' href="#">Home</Nav.Link>
-                                <Nav.Link className='mx-4' href="#">Sobre mim</Nav.Link>
-                                <Nav.Link className='mx-4' href="#">Habilidades</Nav.Link>
+                                <Nav.Link className='me-4' href="#home">Home</Nav.Link>
+                                <Nav.Link className='mx-4' href="#sobre">Sobre mim</Nav.Link>
+                                <Nav.Link className='mx-4' href="#habilidades">Habilidades</Nav.Link>
                                 <Nav.Link className='ms-4' href="#">Projetos</Nav.Link>
                             </Nav>
                         </Navbar>

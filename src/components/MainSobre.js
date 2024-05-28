@@ -5,7 +5,7 @@ import '../assets/MainSobre.css'
 
 const MainSobre = () => {
     return(
-        <Container className="main-sobre d-flex">
+        <Container id="sobre" className="main-sobre d-flex">
             <Row>
                 <Col md={5} className="d-flex flex-column justify-content-center align-items-center">
                     <TiltComponent />

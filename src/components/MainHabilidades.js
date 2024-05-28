@@ -9,7 +9,7 @@ const MainHabilidades = () => {
     const titulo = useSelector(state => state.descricao.titulo)
 
     return(
-        <Container className="main-habilidades d-flex flex-column justify-content-center align-items-center">
+        <Container id="habilidades" className="main-habilidades d-flex flex-column justify-content-center align-items-center">
             <Row>
                 <h1 className="mb-5"><span className="barra-vermelha">|&nbsp;</span>Habilidades</h1>
             </Row>
