@@ -45,7 +45,7 @@ const HabilidadesComponente = (props) => {
 
     return(
         <Container className="container-habilidade">
-            <Image className="img-habilidade" src={habilidade}/>
+            <Image className={`img-habilidade ${props.habilidade}`} src={habilidade}/>
         </Container>
     )
 }
