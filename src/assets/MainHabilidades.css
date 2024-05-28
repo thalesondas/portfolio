@@ -5,3 +5,11 @@
     z-index: -1;
     color: white !important;
 }
+
+.main-habilidades-col2{
+    width: 3em;
+}
+
+.main-habilidades-col2 p{
+    text-align: justify;
+}
