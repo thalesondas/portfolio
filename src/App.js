@@ -5,6 +5,7 @@ import Header from './components/Header'
 import MainHome from './components/MainHome'
 import MainSobre from './components/MainSobre'
 import MainHabilidades from './components/MainHabilidades';
+import MainProjetos from './components/MainProjetos';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ const App = () => {
           <MainHome />
           <MainSobre />
           <MainHabilidades />
+          <MainProjetos />
         </main>
       </Provider>
     </>
