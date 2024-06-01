@@ -6,6 +6,7 @@ import MainHome from './components/MainHome'
 import MainSobre from './components/MainSobre'
 import MainHabilidades from './components/MainHabilidades';
 import MainProjetos from './components/MainProjetos';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -20,6 +21,7 @@ const App = () => {
           <MainHabilidades />
           <MainProjetos />
         </main>
+        <Footer />
       </Provider>
     </>
   )

@@ -51,7 +51,7 @@ const MainHome = () => {
     }
 
     return(
-        <Container id='home' style={{paddingTop: '100px'}}>
+        <Container id='home' className='main-home' style={{paddingTop: '100px'}}>
             <Row style={{ height: '629px' }}>
                 <Col className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
                     <h1>
