@@ -1,3 +1,7 @@
+.teste{
+    flex-wrap: nowrap;
+}
+
 header{
     z-index: 10;
     position: fixed;
@@ -13,6 +17,10 @@ header{
         2px 4px 4px #000;
 }
 
+.img-header{
+    width: 60px;
+}
+
 .nav-link{
     font-size: 18px;
     color: white !important;
@@ -21,10 +29,39 @@ header{
     background-position-y: 90%;
     background-position-x: 50%;
     background-repeat: no-repeat;
+    white-space: nowrap;
     transition: background-size 0.3s ease-in-out;
 }
 
 .nav-link:hover{
     color: #afafaf !important;
     background-size: 100% 0.1em;
+}
+
+.nav-gap .nav-link {
+    margin-right: 18px;
+}
+
+.nav-gap .nav-link:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 992px) {
+    .nav-gap .nav-link {
+        margin-right: 0;
+    }
+
+    .navbar{
+        justify-content: end;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-collapse .nav-link {
+        background-image: none;
+        margin: 0;
+        text-align: end;
+    }
 }
