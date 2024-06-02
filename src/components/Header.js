@@ -1,6 +1,5 @@
 import { Container, Row, Col, Nav, Navbar, Image } from 'react-bootstrap';
 import ProgrammerLogo from '../images/ProgrammerLogo.png';
-
 import '../assets/Header.css';
 
 const Header = () => {

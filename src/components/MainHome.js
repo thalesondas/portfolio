@@ -25,13 +25,13 @@ const MainHome = () => {
             setTimeout(() => {
                 setTexto(textoFinal.substring(0, index + 1))
                 setindex(index + 1)    
-            }, 400);
+            }, 300);
         } else if(index === textoFinal.length) {
             setCursorDigitacao('cursor-digitacao')
             setTimeout(() => {
                 setCursorDigitacao('')
                 setSendoDeletado(true)
-            }, 11000)
+            }, 5000)
         }
     }
 
@@ -40,13 +40,13 @@ const MainHome = () => {
             setTimeout(() => {
                 setTexto(textoFinal.substring(0, index - 1))
                 setindex(index - 1)  
-            }, 400);
+            }, 300);
         } else if(index === 0){
             setCursorDigitacao('cursor-digitacao')
             setTimeout(() => {
                 setCursorDigitacao('')
                 setSendoDeletado(false)
-            }, 3000)
+            }, 2000)
         }
     }
 
