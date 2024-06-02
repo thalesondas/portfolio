@@ -51,8 +51,8 @@ const MainHome = () => {
     }
 
     return(
-        <Container id='home'>
-            <Row>
+        <Container id='home' className="main-home-container d-flex flex-column justify-content-center align-items-center">
+            <Row className='w-100'>
                 <Col xl={7} className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
                     <h1>
                         Olá, eu sou<br />
