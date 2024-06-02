@@ -1,4 +1,23 @@
-.main-home{
+#home h1 span{
+    font-size: 80px;
+}
+
+#home .span-texto{
+    display: inline-block;
+}
+
+#home .span-cursor{
+    display: inline-block;
+    margin: 15px 0 30px 0;
+}
+
+.span-circulo{
+    font-size: 55px !important;
+    color: #9e0008;
+}
+
+#home{
+    padding-top: 210px;
     top: 0;
     left: 0;
     height: 100vh;
