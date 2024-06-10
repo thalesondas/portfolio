@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import RedesSociaisBotao from './RedesSociaisBotao';
 import '../assets/MainHome.css'
 import ProgrammerLogo from '../images/ProgrammerLogo.png';
@@ -11,6 +13,10 @@ const MainHome = () => {
     const [sendoDeletado, setSendoDeletado] = useState(false)
     const [cursorDigitacao, setCursorDigitacao] = useState('')
     const textoFinal = 'Thales Ondas '
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     useEffect(() => {
         if(sendoDeletado === false){
@@ -53,7 +59,7 @@ const MainHome = () => {
     return(
         <Container id='home' className="main-home-container d-flex flex-column justify-content-center align-items-center">
             <Row className='w-100'>
-                <Col xl={7} className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
+                <Col data-aos="fade-right" data-aos-duration="1500" xl={7} className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
                     <h1>
                         Olá, eu sou<br />
                         <span className='span-texto'>{texto}</span><span className={`span-cursor ${cursorDigitacao}`}>|</span><br />
@@ -65,7 +71,7 @@ const MainHome = () => {
                         <RedesSociaisBotao texto='GitHub'/>
                     </div>
                 </Col>
-                <Col xl={5} className='main-home-col2 d-flex justify-content-center align-items-center'>
+                <Col data-aos="fade-left" data-aos-duration="1500" xl={5} className='main-home-col2 d-flex justify-content-center align-items-center'>
                     <Image src={ProgrammerLogo}></Image>
                 </Col>
             </Row>

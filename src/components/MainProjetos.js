@@ -1,10 +1,16 @@
 import { Container, Row, Image } from 'react-bootstrap';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Carousel from 'react-bootstrap/Carousel';
 import TelaPokemon from '../images/TelaPokemon.png'
 import '../assets/MainProjetos.css'
 
 const MainProjetos = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const [index, setIndex] = useState(0);
 
@@ -15,9 +21,9 @@ const MainProjetos = () => {
     return(
         <Container id='projetos' className='main-projetos d-flex flex-column justify-content-center align-items-center'>
             <Row>
-                <h1 className='d-flex justify-content-center align-items-center mb-5'><span className="barra-vermelha">|&nbsp;</span>Projetos</h1>
+                <h1 data-aos='zoom-out-down' className='d-flex justify-content-center align-items-center mb-5'><span className="barra-vermelha">|&nbsp;</span>Projetos</h1>
             </Row>
-            <Row className='d-flex justify-content-center align-items-center'>
+            <Row data-aos='zoom-out-down' data-aos-duration='1500' className='d-flex justify-content-center align-items-center'>
                 <Carousel activeIndex={index} onSelect={handleSelect}>
                     <Carousel.Item>
                         <Image className='w-100' src={TelaPokemon} />

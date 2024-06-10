@@ -1,6 +1,9 @@
+import { useEffect } from "react"
 import { Container, Image } from "react-bootstrap"
 import { useDispatch } from 'react-redux'
 import { setDescricao, setTitulo } from "../redux/reducer"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Html from '../images/html.svg'
 import Css from '../images/css.svg'
 import JavaScript from '../images/javascript.svg'
@@ -16,6 +19,10 @@ import Excel from '../images/excel.svg'
 import '../assets/HabilidadesComponente.css'
 
 const HabilidadesComponente = (props) => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const dispatch = useDispatch();
 
@@ -84,7 +91,7 @@ const HabilidadesComponente = (props) => {
     };
 
     return(
-        <Container className="container-habilidade-estatico" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Container data-aos="flip-left" data-aos-duration={props.duracaoAnimacao} className="container-habilidade-estatico" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Container className="container-habilidade-dinamico">
                 <Image className={`img-habilidade ${props.habilidade}`} src={habilidade}/>
             </Container>
