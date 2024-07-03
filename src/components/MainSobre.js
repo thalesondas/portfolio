@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Image } from "react-bootstrap"
 import TiltComponent from '../components/TiltComponent'
 import RedesSociaisBotao from "./RedesSociaisBotao"
+import Email from "../images/email.svg"
 import '../assets/MainSobre.css'
 
 const MainSobre = () => {
@@ -17,7 +18,7 @@ const MainSobre = () => {
             <Row>
                 <Col data-aos="fade-right" data-aos-duration="1500" md={5} className="d-flex flex-column justify-content-center align-items-center">
                     <TiltComponent />
-                    <p className="p-email mt-5"> E-mail para contato: <span className="span-email">thalesondas0@gmail.com</span></p>
+                    <p className="p-email mt-5"> <Image className='img-email pe-2' src={Email} /> <span className="span-email">thalesondas0@gmail.com</span></p>
                 </Col>
                 <Col data-aos="fade-left" data-aos-duration="1500" md={7} className="main-sobre-col2 d-flex flex-column justify-content-center">
                     <h2 data-aos="fade-down" data-aos-duration="1700" className="mb-4"><span className="barra-vermelha">|</span> Sobre mim</h2>
