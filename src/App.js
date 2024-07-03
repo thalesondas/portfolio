@@ -7,7 +7,7 @@ import MainSobre from './components/MainSobre'
 import MainHabilidades from './components/MainHabilidades';
 import MainProjetos from './components/MainProjetos';
 import Footer from './components/Footer';
-
+import ParticlesComponent from './particles';
 import './App.css';
 
 const App = () => {
@@ -23,6 +23,7 @@ const App = () => {
         </main>
         <Footer />
       </Provider>
+      <ParticlesComponent id='particles' />
     </>
   )
 }

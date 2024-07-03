@@ -1,3 +1,7 @@
+#particles canvas{
+    z-index: -3;
+}
+
 body {
     overflow-x: hidden;
 }
