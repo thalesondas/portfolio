@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import RedesSociaisBotao from './RedesSociaisBotao';
 import '../assets/MainHome.css'
-import ProgrammerLogo from '../images/ProgrammerLogo.png';
+import FotoPerfil from '../images/FotoPerfil.jpeg';
 
 const MainHome = () => {
 
@@ -71,8 +71,8 @@ const MainHome = () => {
                         <RedesSociaisBotao texto='GitHub'/>
                     </div>
                 </Col>
-                <Col data-aos="fade-left" data-aos-duration="1500" xl={5} className='main-home-col2 d-flex justify-content-center align-items-center'>
-                    <Image src={ProgrammerLogo}></Image>
+                <Col data-aos="fade-left" data-aos-duration="1500" xl={5} className='main-home-col2 d-flex justify-content-start align-items-center'>
+                    <Image className='bolha' src={FotoPerfil}></Image>
                 </Col>
             </Row>
         </Container>

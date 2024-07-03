@@ -23,7 +23,7 @@ const MainProjetos = () => {
             <Row>
                 <h1 data-aos='zoom-out-down' className='d-flex justify-content-center align-items-center mb-5'><span className="barra-vermelha">|&nbsp;</span>Projetos</h1>
             </Row>
-            <Row data-aos='zoom-out-down' data-aos-duration='1500' className='d-flex justify-content-center align-items-center'>
+            <Row data-aos='zoom-out-down' data-aos-duration='1500' className='w-75 d-flex justify-content-center align-items-center'>
                 <Carousel activeIndex={index} onSelect={handleSelect}>
                     <Carousel.Item>
                         <Image className='w-100' src={TelaPokemon} />

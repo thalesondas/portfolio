@@ -25,19 +25,39 @@
     z-index: -1;
 }
 
+.bolha{
+    width: 70%;
+    box-shadow: 0px 0px 21px 6px white;
+    animation: bolhaMexendo 8s linear infinite;
+}
+
 .main-home-col1 h1{
     color: white;
     font-size: 44px;
     line-height: 51px;
 }
 
-.main-home-col2 img{
-    width: 35%;
-    animation: flutuar 5s linear infinite;
-}
-
 .cursor-digitacao{
     animation: piscar 1s linear infinite;
+}
+
+@keyframes bolhaMexendo{
+    0%, 100% {
+        border-radius: 100% 50% 60% 90% / 70% 50% 100% 50%;
+        transform: translateY(0);
+    }
+    25% {
+        border-radius: 60% 80% 50% 100% / 50% 70% 50% 100%;
+        transform: translateY(-16px);
+    }
+    50% {
+        border-radius: 50% 100% 100% 50% / 100% 90% 50% 70%;
+        transform: translateY(0px);
+    }
+    75%{
+        border-radius: 70% 90% 80% 70% / 80% 100% 80% 80%;
+        transform: translateY(16px);
+    }
 }
 
 @keyframes piscar {
@@ -49,23 +69,5 @@
     }
     100%{
         opacity: 1;
-    }
-}
-
-@keyframes flutuar{
-    0%{
-        transform: translateY(0);
-    }
-    25%{
-        transform: translateY(-50px);
-    }
-    50%{
-        transform: translateY(0);
-    }
-    75%{
-        transform: translateY(50px);
-    }
-    100%{
-        transform: translateY(0);
     }
 }
