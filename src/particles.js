@@ -77,14 +77,14 @@ const ParticlesComponent = (props) => {
             default: "bounce",
           },
           random: true,
-          speed: 1,
+          speed: 0.7,
           straight: false,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 110,
+          value: 120,
         },
         opacity: {
           value: 0.8,
