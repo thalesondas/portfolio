@@ -5,9 +5,9 @@ import '../assets/Header.css';
 const Header = () => {
     return (
         <header>
-            <Container className='py-2 px-5'>
+            <Container className='py-2 px-4 px-md-5'>
                 <Row className='d-flex align-items-center'>
-                    <Col xs={9} className='d-flex align-items-start'>
+                    <Col xs={10} className='header-col-1 d-flex align-items-start'>
                         <Row>
                             <Col className='d-flex justify-content-end'>
                                 <Image className='img-header' src={ProgrammerLogo}></Image>
@@ -17,7 +17,7 @@ const Header = () => {
                             </Col>
                         </Row>
                     </Col>
-                    <Col xs={3} className='d-flex align-items-center justify-content-end'>
+                    <Col xs={2} className='d-flex align-items-center justify-content-end'>
                         <Navbar expand="md">
                         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                         <Navbar.Collapse className="justify-content-end">

@@ -17,6 +17,10 @@ header{
         2px 4px 4px #000;
 }
 
+header h1{
+    font-size: 40px;
+}
+
 .img-header{
     width: 60px;
 }
@@ -46,6 +50,8 @@ header{
     margin-right: 0;
 }
 
+/* MEDIAS */
+
 @media (max-width: 991.98px) {
     .nav-gap .nav-link {
         margin-right: 0;
@@ -63,5 +69,11 @@ header{
         background-image: none;
         margin: 0;
         text-align: end;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header-col-1{
+        padding-left: 0px;
     }
 }
