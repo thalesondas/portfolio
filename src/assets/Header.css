@@ -46,7 +46,7 @@ header{
     margin-right: 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .nav-gap .nav-link {
         margin-right: 0;
     }
