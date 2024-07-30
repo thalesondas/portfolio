@@ -59,19 +59,19 @@ const MainHome = () => {
     return(
         <Container id='home' className="main-home-container d-flex flex-column justify-content-center align-items-center">
             <Row className='w-100'>
-                <Col data-aos="fade-right" data-aos-duration="1500" xl={7} className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
+                <Col data-aos="fade-right" data-aos-duration="1500" md={7} className='main-home-col1 d-flex flex-column justify-content-center align-items-center'>
                     <h1>
                         Olá, eu sou<br />
                         <span className='span-texto'>{texto}</span><span className={`span-cursor ${cursorDigitacao}`}>|</span><br />
                         <span className='span-circulo'>•</span> Desenvolvedor Full Stack<br />
                         <span className='span-circulo'>•</span> Analista de Dados
                     </h1>
-                    <div className='mt-5'>
+                    <div className='mt-4 mt-md-5'>
                         <RedesSociaisBotao texto='LinkedIn' />
                         <RedesSociaisBotao texto='GitHub'/>
                     </div>
                 </Col>
-                <Col data-aos="fade-left" data-aos-duration="1500" xl={5} className='main-home-col2 d-flex justify-content-start align-items-center'>
+                <Col data-aos="fade-left" data-aos-duration="1500" md={5} className='main-home-col2 d-flex justify-content-center justify-content-xl-start align-items-center'>
                     <Image className='bolha' src={FotoPerfil}></Image>
                 </Col>
             </Row>
