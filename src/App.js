@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Provider } from 'react-redux'
 import store from './redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +12,11 @@ import ParticlesComponent from './particles';
 import './App.css';
 
 const App = () => {
+
+  useEffect(() => {
+    document.title = 'Meu Portfólio - Thales Ondas';
+  }, []);
+
   return (
     <>
       <Provider store={store}>
