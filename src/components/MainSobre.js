@@ -14,13 +14,13 @@ const MainSobre = () => {
     }, [])
 
     return(
-        <Container id="sobre" className="main-sobre d-flex flex-column-reverse">
+        <Container id="sobre" className="main-sobre d-flex">
             <Row>
-                <Col data-aos="fade-right" data-aos-duration="1500" md={6} lg={5} className="d-flex flex-column justify-content-center align-items-start align-items-xl-center">
+                <Col data-aos="fade-right" data-aos-duration="1500" md={6} lg={5} className="d-flex flex-column justify-content-center align-items-center align-items-md-start align-items-xl-center mt-5 mt-md-0">
                     <TiltComponent />
                     <p className="mt-5 ms-3 ms-lg-5"> <Image className='img-email pe-2' src={Email} /> <span className="span-email">thalesondas0@gmail.com</span></p>
                 </Col>
-                <Col data-aos="fade-left" data-aos-duration="1500" md={6} lg={7} className="main-sobre-col2 d-flex flex-column justify-content-center">
+                <Col data-aos="fade-left" data-aos-duration="1500" md={6} lg={7} className="main-sobre-col2 d-flex flex-column justify-content-center mt-5 mt-md-0">
                     <h2 data-aos="fade-down" data-aos-duration="1700" className="mb-4"><span className="barra-vermelha">|</span> Sobre mim</h2>
                     <p>
                         &emsp;Olá! Estou me formando em Análise e Desenvolvimento de Sistemas pela UTFPR de Cornélio Procópio,

@@ -46,3 +46,19 @@ p{
         padding-right: 30px;
     }
 }
+
+@media (max-width: 767.98px) {
+    .main-sobre .row {
+      flex-direction: column-reverse;
+    }
+    .main-sobre-col2{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main-sobre-col2{
+        padding-right: 30px;
+    }
+}
