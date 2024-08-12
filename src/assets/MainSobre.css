@@ -1,12 +1,12 @@
 .main-sobre{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: -1;
     color: white !important;
 }
 
 .main-sobre-col2{
-    padding-right: 170px;
+    padding-right: 120px;
 }
 
 .main-sobre-col2 p{
@@ -33,4 +33,16 @@ p{
 
 .barra-vermelha{
     color: red;
+}
+
+@media (max-width: 1198.98px) {
+    .main-sobre-col2{
+        padding-right: 55px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .main-sobre-col2{
+        padding-right: 30px;
+    }
 }
