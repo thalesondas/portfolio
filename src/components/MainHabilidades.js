@@ -18,10 +18,10 @@ const MainHabilidades = () => {
     return(
         <Container id="habilidades" className="main-habilidades d-flex flex-column justify-content-center align-items-center">
             <Row>
-                <h1 data-aos="flip-down" data-aos-duration='1300' className="mb-5"><span className="barra-vermelha">|&nbsp;</span>Habilidades</h1>
+                <h1 data-aos="flip-down" data-aos-duration='1300' className="mb-5 mt-5"><span className="barra-vermelha">|&nbsp;</span>Habilidades</h1>
             </Row>
             <Row className="row-habilidades">
-                <Col className="main-habilidades-col1 d-flex justify-content-center align-items-center mt-5">
+                <Col className="main-habilidades-col1 d-flex justify-content-center align-items-center">
                     <Row>
                         <HabilidadesComponente duracaoAnimacao='2000' habilidade='html'/>
                         <HabilidadesComponente duracaoAnimacao='1500' habilidade='bootstrap'/>
@@ -43,10 +43,10 @@ const MainHabilidades = () => {
                         <HabilidadesComponente duracaoAnimacao='2500' habilidade='excel'/>
                     </Row>
                 </Col>
-                <Col className="main-habilidades-col2 d-flex flex-column justify-content-center align-items-center me-3">
+                <Col className="main-habilidades-col2 d-flex flex-column justify-content-center align-items-center">
                     {descricao &&
                         <>
-                            <h3 data-aos="flip-left" data-aos-duration="1000" className="mb-5">{titulo}</h3>
+                            <h3 data-aos="flip-left" data-aos-duration="1000" className="mb-4">{titulo}</h3>
                             <p data-aos="flip-left" data-aos-duration="1000" className="justify">&emsp;{descricao}</p>
                         </>
                     }
