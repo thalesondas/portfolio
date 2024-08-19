@@ -86,8 +86,8 @@ const HabilidadesComponente = (props) => {
     };
 
     const handleMouseLeave = () => {
-        dispatch(setDescricao(''));
-        dispatch(setTitulo(''))
+        dispatch(setDescricao('Coloque o mouse sobre o ícone para saber sobre a tecnologia específica.'));
+        dispatch(setTitulo('Saiba sobre a tecnologia'))
     };
 
     return(

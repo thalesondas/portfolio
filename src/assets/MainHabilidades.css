@@ -1,14 +1,33 @@
 .main-habilidades{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: -1;
     color: white !important;
 }
 
+.main-habilidades-col1{
+    
+}
+
 .main-habilidades-col2{
-    width: 3em;
+   min-width: 45vw;
+}
+.main-habilidades p{
+    padding-left: 2rem;
 }
 
 .main-habilidades-col2 p{
     text-align: justify;
+}
+
+@media (max-width: 946.98px) {
+    .row-habilidades{
+        flex-direction: column-reverse;
+    }
+    .main-habilidades-col2{
+        min-height: 380px;
+    }
+    .main-habilidades-col2 p{
+        padding-left: 0px;
+    }
 }

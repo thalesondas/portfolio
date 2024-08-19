@@ -4,8 +4,8 @@
 
 .container-habilidade-estatico{
     padding: 0;
-    margin: 0;
-    width: 72%;
+    margin: 0 10px;
+    width: 120px;
 }
 
 .container-habilidade-dinamico{
