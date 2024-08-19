@@ -25,7 +25,7 @@
         flex-direction: column-reverse;
     }
     .main-habilidades-col1{
-        margin-top: 1rem;
+        margin: 1rem 2.5rem 0 2.5rem;
     }
     .main-habilidades-col2{
         min-height: 290px;
@@ -36,7 +36,16 @@
 }
 
 @media (max-width: 739.98px) {
+    .main-habilidades-col1{
+        margin: 1rem 1.4rem 0 1.4rem;
+    }
     .main-habilidades-col2{
         min-height: 360px;
+    }
+}
+
+@media (max-width: 618.98px) {
+    .main-habilidades-col1{
+        margin: 1rem 0.7rem 0 0.7rem;
     }
 }
