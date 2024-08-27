@@ -81,13 +81,17 @@ const HabilidadesComponente = (props) => {
     }
 
     const handleMouseEnter = () => {
-        dispatch(setDescricao(descricao));
-        dispatch(setTitulo(titulo))
+        if(window.innerWidth > 946.98){
+            dispatch(setDescricao(descricao));
+            dispatch(setTitulo(titulo))
+        }
     };
 
     const handleMouseLeave = () => {
-        dispatch(setDescricao('Coloque o mouse sobre o ícone para saber sobre a tecnologia específica.'));
-        dispatch(setTitulo('Saiba sobre a tecnologia'))
+        if(window.innerWidth > 946.98){
+            dispatch(setDescricao('Escolha uma tecnologia para saber mais sobre ela.'));
+            dispatch(setTitulo('Escolha uma tecnologia'))
+        }
     };
 
     return(
