@@ -83,19 +83,31 @@ const HabilidadesComponente = (props) => {
     const handleMouseEnter = () => {
         if(window.innerWidth > 946.98){
             dispatch(setDescricao(descricao));
-            dispatch(setTitulo(titulo))
+            dispatch(setTitulo(titulo));
         }
     };
 
     const handleMouseLeave = () => {
         if(window.innerWidth > 946.98){
             dispatch(setDescricao('Escolha uma tecnologia para saber mais sobre ela.'));
-            dispatch(setTitulo('Escolha uma tecnologia'))
+            dispatch(setTitulo('Escolha uma tecnologia'));
         }
     };
 
+    const handleOnClick = () => {
+        if(window.innerWidth < 946.98){
+            dispatch(setDescricao(descricao));
+            dispatch(setTitulo(titulo));
+
+            document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                window.scrollBy({ top: -40, left: 0, behavior: 'smooth' });
+            }, 400);
+        }
+    }
+
     return(
-        <Container data-aos="flip-left" data-aos-duration={props.duracaoAnimacao} className="container-habilidade-estatico" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <Container data-aos="flip-left" data-aos-duration={props.duracaoAnimacao} className='container-habilidade-estatico' onClick={handleOnClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Container className="container-habilidade-dinamico">
                 <Image className={`img-habilidade ${props.habilidade}`} src={habilidade}/>
             </Container>
