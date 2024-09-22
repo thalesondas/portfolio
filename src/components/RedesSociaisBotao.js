@@ -8,14 +8,17 @@ const RedesSociaisBotao = (props) => {
 
     let icone
     let btnRedeSocial
+    let linkExterno
     let customWidth = ''
 
     if(props.texto === 'LinkedIn'){
         icone = LinkedIn
         btnRedeSocial = 'btn-linkedin'
+        linkExterno = 'https://www.linkedin.com/in/thales-ondas/'
     } else if(props.texto === 'GitHub'){
         icone = GitHub
         btnRedeSocial = 'btn-github'
+        linkExterno = 'https://github.com/thalesondas/'
     } else if(props.texto === 'Currículo'){
         icone = Curriculo
         btnRedeSocial = 'btn-curriculo'
@@ -25,7 +28,8 @@ const RedesSociaisBotao = (props) => {
     return(
         <Button
             className={`mx-3 px-3 py-2 ${btnRedeSocial} ${customWidth}`}
-            variant="outline-secondary">
+            variant="outline-secondary"
+            onClick={() => window.open(linkExterno, '_blank')}>
                 <Image
                     className="pe-3" src={icone}/> {props.texto} 
         </Button>
