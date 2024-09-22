@@ -8,10 +8,6 @@ import '../assets/MainHabilidades.css'
 
 const MainHabilidades = () => {
 
-    useEffect(() => {
-        AOS.init();
-    }, [])
-
     const descricao = useSelector(state => state.descricao.descricao)
     const titulo = useSelector(state => state.descricao.titulo)
 

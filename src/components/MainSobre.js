@@ -9,10 +9,6 @@ import '../assets/MainSobre.css'
 
 const MainSobre = () => {
 
-    useEffect(() => {
-        AOS.init();
-    }, [])
-
     return(
         <Container id="sobre" className="main-sobre d-flex">
             <Row>

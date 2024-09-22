@@ -8,10 +8,6 @@ import '../assets/MainProjetos.css'
 
 const MainProjetos = () => {
 
-    useEffect(() => {
-        AOS.init();
-    }, [])
-
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex) => {

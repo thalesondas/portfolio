@@ -15,7 +15,7 @@ const MainHome = () => {
     const textoFinal = 'Thales Ondas '
 
     useEffect(() => {
-        AOS.init();
+        AOS.init({ once:true });
     }, [])
 
     useEffect(() => {
