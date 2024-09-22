@@ -1,7 +1,5 @@
 import { Container, Row, Image } from 'react-bootstrap';
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import TelaPokemon from '../images/TelaPokemon.png'
 import '../assets/MainProjetos.css'

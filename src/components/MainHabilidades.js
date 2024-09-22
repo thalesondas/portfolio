@@ -1,9 +1,6 @@
-import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap"
 import HabilidadesComponente from "./HabilidadesComponente"
 import { useSelector } from 'react-redux' 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '../assets/MainHabilidades.css'
 
 const MainHabilidades = () => {

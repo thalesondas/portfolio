@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { Container, Row, Col, Image } from "react-bootstrap"
 import TiltComponent from '../components/TiltComponent'
 import RedesSociaisBotao from "./RedesSociaisBotao"
