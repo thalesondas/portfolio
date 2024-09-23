@@ -1,39 +1,15 @@
-import { Container, Row, Image } from 'react-bootstrap';
-import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import TelaPokemon from '../images/TelaPokemon.png'
+import { Container, Row } from 'react-bootstrap';
 import '../assets/MainProjetos.css'
+import ProjetoLista from './ProjetoLista';
 
 const MainProjetos = () => {
-
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex) => {
-      setIndex(selectedIndex);
-    };
-
     return(
-        <Container id='projetos' className='main-projetos d-flex flex-column justify-content-center align-items-center'>
+        <Container id='projetos' className='main-projetos d-flex flex-column mt-5 mt-md-1 justify-content-center align-items-center'>
             <Row>
                 <h1 data-aos='zoom-out-down' className='d-flex justify-content-center align-items-center mb-5'><span className="barra-vermelha">|&nbsp;</span>Projetos</h1>
             </Row>
-            <Row data-aos='zoom-out-down' data-aos-duration='1500' className='w-75 d-flex justify-content-center align-items-center'>
-                <Carousel activeIndex={index} onSelect={handleSelect}>
-                    <Carousel.Item>
-                        <Image className='w-100' src={TelaPokemon} />
-                        <Carousel.Caption className='text-black'>
-                        <h3>Projeto 1</h3>
-                        <p>Descrição do projeto 1</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <Image className='w-100' src={TelaPokemon} />
-                        <Carousel.Caption className='text-black'>
-                        <h3>Projeto 2</h3>
-                        <p>Descrição do projeto 2</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+            <Row className='mx-2'>
+                <ProjetoLista />
             </Row>
         </Container>
     )

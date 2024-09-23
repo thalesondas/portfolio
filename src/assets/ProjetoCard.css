@@ -1,0 +1,24 @@
+.projeto-card {
+    transition: transform 0.2s;
+  }
+  
+  .projeto-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .projeto-imagem {
+    border-radius: 0.5rem;
+  }
+  
+  .projeto-titulo {
+    font-size: 1.5rem;
+  }
+  
+  .projeto-descricao {
+    font-size: 1rem;
+  }
+  
+  .tec-badge {
+    margin: 4px;
+  }
+  
