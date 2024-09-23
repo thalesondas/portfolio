@@ -1,5 +1,6 @@
-.teste{
-    flex-wrap: nowrap;
+.navbar{
+    --bs-navbar-toggler-border-color: rgb(255 255 255 / 15%);
+    --bs-navbar-color: rgb(70 70 70 / 50%);
 }
 
 header{
