@@ -26,51 +26,63 @@
 }
 
 /* Códigos abaixo para fazer a mudança de cor na imagem para cada tipo de linguagem de programação */
-.container-habilidade-estatico:hover .html{
+.container-habilidade-estatico:hover .html,
+.html-ativo{
     filter: invert(61%) sepia(87%) saturate(5641%) hue-rotate(351deg) brightness(97%) contrast(103%);
 }
 
-.container-habilidade-estatico:hover .css{
+.container-habilidade-estatico:hover .css,
+.css-ativo{
     filter: invert(20%) sepia(99%) saturate(3055%) hue-rotate(229deg) brightness(95%) contrast(89%);
 }
 
-.container-habilidade-estatico:hover .javascript{
+.container-habilidade-estatico:hover .javascript,
+.javascript-ativo{
     filter: invert(80%) sepia(23%) saturate(1038%) hue-rotate(5deg) brightness(109%) contrast(88%);
 }
 
-.container-habilidade-estatico:hover .reactjs{
+.container-habilidade-estatico:hover .reactjs,
+.reactjs-ativo{
     filter: invert(92%) sepia(20%) saturate(4966%) hue-rotate(162deg) brightness(100%) contrast(97%);
 }
 
-.container-habilidade-estatico:hover .bootstrap{
+.container-habilidade-estatico:hover .bootstrap,
+.bootstrap-ativo{
     filter: invert(12%) sepia(75%) saturate(7483%) hue-rotate(268deg) brightness(97%) contrast(101%);
 }
 
-.container-habilidade-estatico:hover .postgresql{
+.container-habilidade-estatico:hover .postgresql,
+.postgresql-ativo{
     filter: invert(39%) sepia(6%) saturate(4723%) hue-rotate(165deg) brightness(95%) contrast(85%);
 }
 
-.container-habilidade-estatico:hover .mongodb{
+.container-habilidade-estatico:hover .mongodb,
+.mongodb-ativo{
     filter: invert(55%) sepia(60%) saturate(487%) hue-rotate(65deg) brightness(96%) contrast(81%);
 }
 
-.container-habilidade-estatico:hover .git{
+.container-habilidade-estatico:hover .git,
+.git-ativo{
     filter: invert(38%) sepia(18%) saturate(5177%) hue-rotate(340deg) brightness(107%) contrast(88%);
 }
 
-.container-habilidade-estatico:hover .ingles{
+.container-habilidade-estatico:hover .ingles,
+.ingles-ativo{
     filter: invert(6%) sepia(60%) saturate(6201%) hue-rotate(244deg) brightness(107%) contrast(114%);
 }
 
-.container-habilidade-estatico:hover .python{
+.container-habilidade-estatico:hover .python,
+.python-ativo{
     filter: invert(87%) sepia(62%) saturate(1878%) hue-rotate(318deg) brightness(103%) contrast(105%);
 }
 
-.container-habilidade-estatico:hover .powerbi{
+.container-habilidade-estatico:hover .powerbi,
+.powerbi-ativo{
     filter: invert(60%) sepia(91%) saturate(1364%) hue-rotate(2deg) brightness(92%) contrast(108%);
 }
 
-.container-habilidade-estatico:hover .excel{
+.container-habilidade-estatico:hover .excel,
+.excel-ativo{
     filter: invert(36%) sepia(16%) saturate(1590%) hue-rotate(94deg) brightness(98%) contrast(89%);
 }
 
