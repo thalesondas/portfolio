@@ -22,6 +22,7 @@ const HabilidadesComponente = (props) => {
     const componenteRef = useRef(null);
 
     const [estaAtiva, setEstaAtiva] = useState(false)
+    const [containerAtivo, setContainerAtivo] = useState(false)
 
     let habilidade;
     let descricao;
@@ -108,6 +109,7 @@ const HabilidadesComponente = (props) => {
 
         dispatch(setHabilidadeAtiva(habilidadeAtiva))
         setEstaAtiva(true);
+        setContainerAtivo(true);
 
         if(window.innerWidth < 946.98){
             dispatch(setDescricao(descricao));
@@ -124,6 +126,7 @@ const HabilidadesComponente = (props) => {
         const handleOnClickFora = () => {
             if(componenteRef.current) {
                 setEstaAtiva(false);
+                setContainerAtivo(false);
             }
         };
         document.addEventListener("mousedown", handleOnClickFora);
@@ -139,7 +142,7 @@ const HabilidadesComponente = (props) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
 
-            <Container className="container-habilidade-dinamico">
+            <Container className={`container-habilidade-dinamico ${containerAtivo ? 'container-ativo' : ''}`}>
                 <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeAtiva : ''}`} src={habilidade}/>
             </Container>
         </Container>

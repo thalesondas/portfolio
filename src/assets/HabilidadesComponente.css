@@ -25,6 +25,10 @@
     background-color: whitesmoke;
 }
 
+.container-ativo{
+    background-color: rgb(220, 220, 220);
+}
+
 /* Códigos abaixo para fazer a mudança de cor na imagem para cada tipo de linguagem de programação */
 .container-habilidade-estatico:hover .html,
 .html-ativo{
