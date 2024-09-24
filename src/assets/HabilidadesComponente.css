@@ -80,14 +80,14 @@
     filter: invert(87%) sepia(62%) saturate(1878%) hue-rotate(318deg) brightness(103%) contrast(105%);
 }
 
-.container-habilidade-estatico:hover .powerbi,
-.powerbi-ativo{
-    filter: invert(60%) sepia(91%) saturate(1364%) hue-rotate(2deg) brightness(92%) contrast(108%);
+.container-habilidade-estatico:hover .nodejs,
+.nodejs-ativo{
+    filter: invert(62%) sepia(5%) saturate(4964%) hue-rotate(47deg) brightness(121%) contrast(71%);
 }
 
-.container-habilidade-estatico:hover .excel,
-.excel-ativo{
-    filter: invert(36%) sepia(16%) saturate(1590%) hue-rotate(94deg) brightness(98%) contrast(89%);
+.container-habilidade-estatico:hover .java,
+.java-ativo{
+    filter: invert(40%) sepia(94%) saturate(742%) hue-rotate(166deg) brightness(93%) contrast(94%);
 }
 
 @keyframes quicar{

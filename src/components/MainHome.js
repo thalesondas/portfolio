@@ -63,8 +63,7 @@ const MainHome = () => {
                     <h1>
                         Olá, eu sou<br />
                         <span className='span-texto'>{texto}</span><span className={`span-cursor ${cursorDigitacao}`}>|</span><br />
-                        <span className='span-circulo'>•</span> Desenvolvedor Full Stack<br />
-                        <span className='span-circulo'>•</span> Analista de Dados
+                        <div className='mt-4'><span className='span-circulo'>•</span> Desenvolvedor Full Stack<br /></div>
                     </h1>
                     <div className='mt-4 mt-md-5'>
                         <RedesSociaisBotao texto='LinkedIn' />

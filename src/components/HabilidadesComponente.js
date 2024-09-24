@@ -12,8 +12,8 @@ import MongoDB from '../images/mongodb.svg'
 import Git from '../images/git.svg'
 import Ingles from '../images/ingles.svg'
 import Python from '../images/python.svg'
-import PowerBI from '../images/powerbi.svg'
-import Excel from '../images/excel.svg'
+import NodeJS from '../images/nodejs.svg'
+import Java from '../images/java.svg'
 import '../assets/HabilidadesComponente.css'
 
 const HabilidadesComponente = (props) => {
@@ -47,7 +47,7 @@ const HabilidadesComponente = (props) => {
     } else if(props.habilidade === 'reactjs'){
         habilidade = ReactJS
         habilidadeAtiva = 'reactjs-ativo'
-        titulo = 'ReactJS'
+        titulo = 'React.js'
         descricao = 'ReactJS é uma biblioteca JavaScript de código aberto, desenvolvida pelo Facebook, para a construção de interfaces de usuário (UI). Ele é amplamente utilizado para criar aplicações web dinâmicas e de alta performance. React adota uma abordagem baseada em componentes, onde a interface do usuário é dividida em pequenos blocos reutilizáveis, cada um com sua própria lógica e estado.'
     } else if(props.habilidade === 'bootstrap'){
         habilidade = Bootstrap
@@ -79,16 +79,16 @@ const HabilidadesComponente = (props) => {
         habilidadeAtiva = 'python-ativo'
         titulo = 'Python'
         descricao = 'O Python se consolidou como uma linguagem de programação indispensável para análise de dados, devido à sua versatilidade, simplicidade e amplo leque de bibliotecas especializadas. Sua sintaxe é intuitiva e a curva de aprendizado é suave.'
-    } else if(props.habilidade === 'powerbi'){
-        habilidade = PowerBI
-        habilidadeAtiva = 'powerbi-ativo'
-        titulo = 'Power BI'
-        descricao = 'O Power BI se tornou uma ferramenta essencial para análise de dados, permitindo que empresas e profissionais transformem dados brutos em insights acionáveis e visualizações impactantes. Sua interface intuitiva, recursos poderosos e ampla variedade de conectores o tornam ideal para usuários de todos os níveis de experiência em análise de dados.'
-    } else if(props.habilidade === 'excel'){
-        habilidade = Excel
-        habilidadeAtiva = 'excel-ativo'
-        titulo = 'Excel'
-        descricao = 'O Excel se destaca como uma ferramenta poderosa para análise de dados, mesmo que não seja sua função principal. Sua interface intuitiva, recursos robustos e ampla variedade de funções o tornam acessível para iniciantes e usuários experientes em análise de dados.'
+    } else if(props.habilidade === 'nodejs'){
+        habilidade = NodeJS
+        habilidadeAtiva = 'nodejs-ativo'
+        titulo = 'Node.js'
+        descricao = 'Node.js é um ambiente de execução JavaScript baseado no motor V8 do Google Chrome, que permite executar código JavaScript no lado do servidor. É conhecido por sua alta performance e eficiência em aplicações em tempo real, como chats e jogos, devido à sua arquitetura assíncrona e orientada a eventos. Node.js é amplamente utilizado para construir APIs, serviços web e aplicações escaláveis.'
+    } else if(props.habilidade === 'java'){
+        habilidade = Java
+        habilidadeAtiva = 'java-ativo'
+        titulo = 'Java'
+        descricao = 'Java é uma linguagem de programação orientada a objetos. É conhecida por sua portabilidade, segurança e robustez, sendo amplamente utilizada em aplicativos web, móveis (especialmente Android) e sistemas corporativos.'
     }
 
     const handleOnClick = () => {

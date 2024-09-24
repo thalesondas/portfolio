@@ -28,12 +28,12 @@ const MainHabilidades = () => {
                     <Row>
                         <HabilidadesComponente duracaoAnimacao='1700' habilidade='javascript'/>
                         <HabilidadesComponente duracaoAnimacao='900' habilidade='mongodb'/>
-                        <HabilidadesComponente duracaoAnimacao='2300' habilidade='powerbi'/>
+                        <HabilidadesComponente duracaoAnimacao='2300' habilidade='nodejs'/>
                     </Row>
                     <Row>
                         <HabilidadesComponente duracaoAnimacao='1100' habilidade='reactjs'/>
                         <HabilidadesComponente duracaoAnimacao='1900' habilidade='git'/>
-                        <HabilidadesComponente duracaoAnimacao='2500' habilidade='excel'/>
+                        <HabilidadesComponente duracaoAnimacao='2500' habilidade='java'/>
                     </Row>
                 </Col>
                 <Col className="main-habilidades-col2 d-flex flex-column justify-content-center align-items-center">
