@@ -3,7 +3,7 @@ import '../assets/ProjetoCard.css'
 
 const ProjetoCard = ({ projeto }) => {
     return(
-        <Card data-aos='fade-down' className="projeto-card my-1">
+      <Card className="projeto-card my-1">
         <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" />
         <Card.Body>
           <Card.Title className="projeto-titulo">{projeto.titulo}</Card.Title>
