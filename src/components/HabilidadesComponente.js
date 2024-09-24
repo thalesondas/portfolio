@@ -91,30 +91,15 @@ const HabilidadesComponente = (props) => {
         descricao = 'O Excel se destaca como uma ferramenta poderosa para análise de dados, mesmo que não seja sua função principal. Sua interface intuitiva, recursos robustos e ampla variedade de funções o tornam acessível para iniciantes e usuários experientes em análise de dados.'
     }
 
-    const handleMouseEnter = () => {
-        if(window.innerWidth > 946.98){
-            dispatch(setDescricao(descricao));
-            dispatch(setTitulo(titulo));
-        }
-    };
-
-    const handleMouseLeave = () => {
-        if(window.innerWidth > 946.98){
-            dispatch(setDescricao('Escolha uma tecnologia para saber mais sobre ela.'));
-            dispatch(setTitulo('Escolha uma tecnologia'));
-        }
-    };
-
     const handleOnClick = () => {
 
         dispatch(setHabilidadeAtiva(habilidadeAtiva))
+        dispatch(setDescricao(descricao));
+        dispatch(setTitulo(titulo));
         setEstaAtiva(true);
         setContainerAtivo(true);
 
         if(window.innerWidth < 946.98){
-            dispatch(setDescricao(descricao));
-            dispatch(setTitulo(titulo));
-
             document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 window.scrollBy({ top: -40, left: 0, behavior: 'smooth' });
@@ -125,11 +110,16 @@ const HabilidadesComponente = (props) => {
     useEffect(() => {
         const handleOnClickFora = () => {
             if(componenteRef.current) {
+                dispatch(setTitulo('Saiba sobre a tecnologia'));
+                dispatch(setDescricao('Clique no ícone para saber sobre a tecnologia específica.'));
                 setEstaAtiva(false);
                 setContainerAtivo(false);
             }
         };
         document.addEventListener("mousedown", handleOnClickFora);
+        return () => {
+            document.removeEventListener("mousedown", handleOnClickFora);
+        };
     }, [componenteRef]);
 
     return(
@@ -138,9 +128,7 @@ const HabilidadesComponente = (props) => {
             data-aos="flip-left"
             data-aos-duration={props.duracaoAnimacao}
             className='container-habilidade-estatico'
-            onClick={handleOnClick}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
+            onClick={handleOnClick}>
 
             <Container className={`container-habilidade-dinamico ${containerAtivo ? 'container-ativo' : ''}`}>
                 <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeAtiva : ''}`} src={habilidade}/>

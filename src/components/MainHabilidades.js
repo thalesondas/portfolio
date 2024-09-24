@@ -11,7 +11,7 @@ const MainHabilidades = () => {
     return(
         <Container id="habilidades" className="main-habilidades d-flex flex-column justify-content-center align-items-center">
             <Row>
-                <h1 data-aos="flip-down" data-aos-duration='1300' className="mb-5 mt-5"><span className="barra-vermelha">|&nbsp;</span>Habilidades</h1>
+                <h1 data-aos="flip-down" data-aos-duration='1300' className="mb-5 mt-5"><span className="barra-vermelha">|&nbsp;</span>Principais Habilidades</h1>
             </Row>
             <Row className="row-habilidades">
                 <Col className="main-habilidades-col1 d-flex justify-content-center align-items-center">

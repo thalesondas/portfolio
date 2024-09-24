@@ -3,7 +3,7 @@ import { createSlice, combineReducers } from '@reduxjs/toolkit';
 const descricaoSlice = createSlice({
     name: 'descricao',
     initialState: {
-        descricao: 'Coloque o mouse sobre o ícone para saber sobre a tecnologia específica.',
+        descricao: 'Clique no ícone para saber sobre a tecnologia específica.',
         titulo: 'Saiba sobre a tecnologia',
         habilidadeAtiva: ''
     },
