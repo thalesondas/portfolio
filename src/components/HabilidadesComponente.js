@@ -120,7 +120,7 @@ const HabilidadesComponente = (props) => {
         return () => {
             document.removeEventListener("mousedown", handleOnClickFora);
         };
-    }, [componenteRef]);
+    }, [dispatch, componenteRef]);
 
     return(
         <Container
