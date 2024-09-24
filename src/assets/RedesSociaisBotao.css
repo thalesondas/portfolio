@@ -6,7 +6,7 @@
     color: white !important;
     border: 1px solid white;
     box-shadow: 0px 0px 7px whitesmoke;
-    transition: box-shadow 0.5s ease-in-out, border 0.5s ease-in-out;
+    transition: box-shadow 0.6s ease-in-out, border 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 .btn img{
@@ -18,18 +18,21 @@
     box-shadow: 0px 0px 30px #e6020e;
     border: 1px solid #e6020e;
     color: #ffcfd2 !important;
+    transform: scale(1.1);
 }
 
 .btn-linkedin:hover{
     box-shadow: 0px 0px 30px #0a66c2;
     border: 1px solid #0a66c2;
     color: #4ca4fb !important;
+    transform: scale(1.1);
 }
 
 .btn-curriculo:hover{
     box-shadow: 0px 0px 20px #ffffff;
     border: 1px solid #000000;
     color: #d3d9dd !important;
+    transform: scale(1.1);
 }
 
 .btn-github:hover img {
