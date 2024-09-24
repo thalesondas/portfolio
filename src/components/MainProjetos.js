@@ -8,7 +8,7 @@ const MainProjetos = () => {
             <Row>
                 <h1 data-aos='zoom-out-down' className='d-flex justify-content-center align-items-center mb-5'><span className="barra-vermelha">|&nbsp;</span>Projetos</h1>
             </Row>
-            <Row className='mx-2'>
+            <Row className='mx-3'>
                 <ProjetoLista />
             </Row>
         </Container>

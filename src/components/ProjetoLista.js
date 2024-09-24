@@ -4,22 +4,34 @@ import ProjetoCard from './ProjetoCard';
 
 const projetos = [
   {
-    titulo: 'Projeto 1',
-    descricao: 'Descrição do projeto 1',
+    titulo: 'Placeholder 1',
+    descricao: 'Descrição placeholder (a imagem também é placeholder)',
     imagem: Placeholder,
-    tecnologias: ['Tecnologia 1', 'Tecnologia 2', 'Tecnologia 3'],
+    tecnologias: ['Tecnologia 1', 'Tecnologia 2', 'Tecnologia 3']
   },
   {
-    titulo: 'Projeto 2',
-    descricao: 'Descrição do projeto 2',
+    titulo: 'Placeholder 2',
+    descricao: 'Descrição placeholder (a imagem também é placeholder)',
     imagem: Placeholder,
-    tecnologias: ['Tecnologia 4', 'Tecnologia 5', 'Tecnologia 6'],
+    tecnologias: ['Tecnologia 4', 'Tecnologia 5', 'Tecnologia 6']
   },
   {
-    titulo: 'Projeto 3',
-    descricao: 'Descrição do projeto 3',
+    titulo: 'Placeholder 3',
+    descricao: 'Descrição placeholder (a imagem também é placeholder) blablablablabla blablablablabla blablablablabla blablablablabla',
     imagem: Placeholder,
-    tecnologias: ['Tecnologia 7', 'Tecnologia 8', 'Tecnologia 9'],
+    tecnologias: ['Tecnologia 7', 'Tecnologia 8', 'Tecnologia 9']
+  },
+  {
+    titulo: 'Placeholder 4',
+    descricao: 'Descrição placeholder (a imagem também é placeholder)',
+    imagem: Placeholder,
+    tecnologias: ['Tecnologia 10', 'Tecnologia 11', 'Tecnologia 12']
+  },
+  {
+    titulo: 'Placeholder 5',
+    descricao: 'Descrição placeholder (a imagem também é placeholder)',
+    imagem: Placeholder,
+    tecnologias: ['Tecnologia 13', 'Tecnologia 14', 'Tecnologia 15']
   }
 ];
 
