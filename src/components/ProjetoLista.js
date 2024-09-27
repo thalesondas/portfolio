@@ -51,7 +51,7 @@ const ProjetoLista = () => {
       <Row>
         {projetos.map((projeto, index) => (
           <Col key={index} md={4} className="mb-4">
-            <ProjetoCard projeto={projeto} />
+            <ProjetoCard i={index} projeto={projeto} />
           </Col>
         ))}
       </Row>
