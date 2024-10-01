@@ -67,7 +67,7 @@ const MainHome = () => {
                     </h1>
                     <div className='mt-4 mt-md-5'>
                         <RedesSociaisBotao texto='LinkedIn' />
-                        <RedesSociaisBotao texto='GitHub'/>
+                        <RedesSociaisBotao texto='GitHub' />
                     </div>
                 </Col>
                 <Col data-aos="fade-left" data-aos-duration="1500" md={5} className='main-home-col2 d-flex justify-content-center justify-content-xl-start align-items-center'>

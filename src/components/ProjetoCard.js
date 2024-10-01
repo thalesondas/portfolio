@@ -3,8 +3,10 @@ import '../assets/ProjetoCard.css'
 
 const ProjetoCard = ({ projeto }) => {
     return(
-      <Card className="projeto-card my-1" data-aos="fade-right">
-        <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" />
+      <Card className="projeto-card m-2" data-aos="fade-right">
+        <a href={projeto.linkSite} target="_blank" rel="noopener noreferrer">
+          <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" />
+        </a>
         <Card.Body>
           <Card.Title className="projeto-titulo">{projeto.titulo}</Card.Title>
           <Card.Text className="projeto-descricao">{projeto.descricao}</Card.Text>
