@@ -11,7 +11,7 @@ import PostgreSql from '../images/postgresql.svg'
 import MongoDB from '../images/mongodb.svg'
 import Git from '../images/git.svg'
 import Ingles from '../images/ingles.svg'
-import Python from '../images/python.svg'
+import Redux from '../images/redux.svg'
 import NodeJS from '../images/nodejs.svg'
 import Java from '../images/java.svg'
 import '../assets/HabilidadesComponente.css'
@@ -79,11 +79,11 @@ const HabilidadesComponente = (props) => {
             titulo: 'Inglês',
             descricao: 'O inglês se consolidou como a língua franca global, exercendo um papel fundamental na comunicação internacional, no acesso à informação e no desenvolvimento profissional e pessoal.'
         },
-        python: {
-            habilidade: Python,
-            habilidadeAtiva: 'python-ativo',
-            titulo: 'Python',
-            descricao: 'Python é uma linguagem de programação versátil e de fácil aprendizado, conhecida por sua sintaxe simples e legível. Ela é amplamente utilizada em diversas áreas, como desenvolvimento web, automação, ciência de dados, inteligência artificial e muito mais, graças a suas vastas bibliotecas e comunidade ativa.'
+        redux: {
+            habilidade: Redux,
+            habilidadeAtiva: 'redux-ativo',
+            titulo: 'Redux Toolkit',
+            descricao: 'Redux é uma biblioteca de gerenciamento de estado previsível para aplicações JavaScript, especialmente aquelas construídas com bibliotecas como React. Ele centraliza o estado da aplicação em um único objeto chamado "store", permitindo que diferentes componentes acessem e atualizem o estado de maneira previsível através de "ações" e "reduzidores".'
         },
         nodejs: {
             habilidade: NodeJS,
@@ -99,7 +99,7 @@ const HabilidadesComponente = (props) => {
         }
     };
 
-    const habilidadeInfo = habilidadesMap[props.habilidade]
+    const habilidadeInfo = habilidadesMap[props.habilidade] || {}
 
     const handleOnClick = () => {
 

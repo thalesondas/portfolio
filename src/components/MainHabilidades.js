@@ -23,7 +23,7 @@ const MainHabilidades = () => {
                     <Row>
                         <HabilidadesComponente duracaoAnimacao='2200' habilidade='css'/>
                         <HabilidadesComponente duracaoAnimacao='1600' habilidade='postgresql'/>
-                        <HabilidadesComponente duracaoAnimacao='1000' habilidade='python'/>
+                        <HabilidadesComponente duracaoAnimacao='1000' habilidade='redux'/>
                     </Row>
                     <Row>
                         <HabilidadesComponente duracaoAnimacao='1700' habilidade='javascript'/>
