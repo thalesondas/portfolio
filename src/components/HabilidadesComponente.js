@@ -89,7 +89,7 @@ const HabilidadesComponente = (props) => {
             habilidade: NodeJS,
             habilidadeAtiva: 'nodejs-ativo',
             titulo: 'Node.js',
-            descricao: 'Node.js é um ambiente de execução JavaScript baseado no motor V8 do Google Chrome, que permite executar código JavaScript no lado do servidor. É conhecido por sua alta performance e eficiência em aplicações em tempo real, como chats e jogos, devido à sua arquitetura assíncrona e orientada a eventos. Node.js é amplamente utilizado para construir APIs, serviços web e aplicações escaláveis.'
+            descricao: 'Node.js é um ambiente de execução JavaScript que permite executar código JavaScript no lado do servidor. É conhecido por sua alta performance e eficiência em aplicações em tempo real, como chats e jogos, devido à sua arquitetura assíncrona e orientada a eventos. Node.js é amplamente utilizado para construir APIs, serviços web e aplicações escaláveis.'
         },
         java: {
             habilidade: Java,
