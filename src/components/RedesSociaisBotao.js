@@ -9,7 +9,6 @@ const RedesSociaisBotao = (props) => {
     let icone
     let btnRedeSocial
     let linkExterno
-    let customWidth = ''
 
     if(props.texto === 'LinkedIn'){
         icone = LinkedIn

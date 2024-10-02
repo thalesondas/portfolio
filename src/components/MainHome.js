@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap'
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import RedesSociaisBotao from './RedesSociaisBotao';
 import '../assets/MainHome.css'
@@ -9,52 +8,48 @@ import FotoPerfil from '../images/FotoPerfil.jpeg';
 const MainHome = () => {
 
     const [texto, setTexto] = useState('')
-    const [index, setindex] = useState(0)
+    const [index, setIndex] = useState(0)
     const [sendoDeletado, setSendoDeletado] = useState(false)
     const [cursorDigitacao, setCursorDigitacao] = useState('')
     const textoFinal = 'Thales Ondas '
 
-    useEffect(() => {
-        AOS.init({ once: true });
-    }, [])
-
-    useEffect(() => {
-        if(sendoDeletado === false){
-            inserirCaracteres()
-        } else if(sendoDeletado === true){
-            retirarCaracteres()
-        }
-    }, [texto, sendoDeletado]);
-
-    const inserirCaracteres = () => {
-        if(index < textoFinal.length){
+    const inserirCaracteres = useCallback(() => {
+        if (index < textoFinal.length) {
             setTimeout(() => {
-                setTexto(textoFinal.substring(0, index + 1))
-                setindex(index + 1)    
+                setTexto(textoFinal.substring(0, index + 1));
+                setIndex(index + 1);
             }, 300);
-        } else if(index === textoFinal.length) {
-            setCursorDigitacao('cursor-digitacao')
+        } else if (index === textoFinal.length) {
+            setCursorDigitacao('cursor-digitacao');
             setTimeout(() => {
-                setCursorDigitacao('')
-                setSendoDeletado(true)
-            }, 5000)
+                setCursorDigitacao('');
+                setSendoDeletado(true);
+            }, 5000);
         }
-    }
+    }, [index, textoFinal]);
 
-    const retirarCaracteres = () => {
-        if(index > 0){
+    const retirarCaracteres = useCallback(() => {
+        if (index > 0) {
             setTimeout(() => {
-                setTexto(textoFinal.substring(0, index - 1))
-                setindex(index - 1)  
+                setTexto(textoFinal.substring(0, index - 1));
+                setIndex(index - 1);
             }, 300);
-        } else if(index === 0){
-            setCursorDigitacao('cursor-digitacao')
+        } else if (index === 0) {
+            setCursorDigitacao('cursor-digitacao');
             setTimeout(() => {
-                setCursorDigitacao('')
-                setSendoDeletado(false)
-            }, 2000)
+                setCursorDigitacao('');
+                setSendoDeletado(false);
+            }, 2000);
         }
-    }
+    }, [index, textoFinal]);
+
+    useEffect(() => {
+        if (!sendoDeletado) {
+            inserirCaracteres();
+        } else {
+            retirarCaracteres();
+        }
+    }, [texto, sendoDeletado, inserirCaracteres, retirarCaracteres]);
 
     return(
         <Container id='home' className="main-home-container d-flex flex-column justify-content-center align-items-center">
