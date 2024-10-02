@@ -24,7 +24,7 @@ const projetos = [
   },
   {
     titulo: 'Satisfying.you',
-    descricao: 'O Satisfying.you é um aplicativo móvel para Android e iOS, criado para coletar feedback de clientes por meio de pesquisas de satisfação. Com uma interface simples e intuitiva, permite que as empresas identifiquem pontos de melhoria em seus produtos, serviços e processos. As pesquisas podem ser personalizadas, e os resultados são fornecidos em tempo real, auxiliando na tomada de decisões e no aprimoramento contínuo da experiência do cliente.',
+    descricao: 'O Satisfying.you é um aplicativo móvel para Android e iOS, criado para coletar feedback de clientes por meio de pesquisas de satisfação. Com uma interface simples e intuitiva, permite que as empresas identifiquem pontos de melhoria em seus produtos, serviços e processos. As pesquisas podem ser personalizadas, e os resultados são fornecidos em tempo real, auxiliando na tomada de decisões e no aprimoramento contínuo da experiência do cliente. (O aplicativo não está publicado)',
     imagem: TelaMobile,
     tecnologias: ['JavaScript', 'React Native', 'Redux Toolkit', 'Firebase'],
     linkSite: '',
