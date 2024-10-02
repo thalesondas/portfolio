@@ -71,7 +71,7 @@ const MainHome = () => {
                     </div>
                 </Col>
                 <Col data-aos="fade-left" data-aos-duration="1500" md={5} className='main-home-col2 d-flex justify-content-center justify-content-xl-start align-items-center'>
-                    <Image className='bolha' src={FotoPerfil}></Image>
+                    <Image className='bolha' src={FotoPerfil} draggable="false"></Image>
                 </Col>
             </Row>
         </Container>

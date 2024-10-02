@@ -9,10 +9,10 @@ const ProjetoCard = ({ projeto }) => {
     <Card className="projeto-card m-2" data-aos="fade-right">
       {temSite ? (
         <a href={projeto.linkSite} target="_blank" rel="noopener noreferrer">
-          <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" />
+          <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" draggable="false" />
         </a>
       ) : (
-        <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" />
+        <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" draggable="false" />
       )}
       <Card.Body>
         <Card.Title className="projeto-titulo">{projeto.titulo}</Card.Title>

@@ -24,8 +24,7 @@ const RedesSociaisFooter = (props) => {
             className={`m-3 ${btnRedeSocial}`}
             variant="outline-secondary"
             onClick={() => window.open(linkExterno, '_blank')}>
-                <Image
-                    className="img-footer" src={icone}/>
+                <Image className="img-footer" src={icone} draggable="false"/>
         </Button>
     )
 }

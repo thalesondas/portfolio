@@ -11,7 +11,7 @@ const TiltComponent = () => {
             perspective={2600}
         >
             <div className='tiltComponent'>
-                <Image src={Programmer}/>
+                <Image src={Programmer} draggable="false"/>
             </div>
         </Tilt>
     )

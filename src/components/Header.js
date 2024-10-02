@@ -18,7 +18,7 @@ const Header = () => {
                     <Col xs={10} md={5} lg={4} xl={3} className='header-col-1 d-flex align-items-start'>
                         <Row>
                             <Col className='d-flex justify-content-end'>
-                                <Image className='img-header' src={ProgrammerLogo}></Image>
+                                <Image className='img-header' src={ProgrammerLogo} draggable="false" />
                             </Col>
                             <Col className='d-flex align-items-end'>
                                 <h1 className='cormorant'>Thales.dev</h1>

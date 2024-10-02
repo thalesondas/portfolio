@@ -21,7 +21,7 @@ const RedesSociaisBotao = (props) => {
         linkExterno = 'https://github.com/thalesondas/'
     } else if(props.texto === 'Currículo'){
         icone = Curriculo
-        btnRedeSocial = 'btn-curriculo'
+        btnRedeSocial = 'btn-curriculo custom-width'
         linkExterno = 'https://thalesondas-curriculum.netlify.app'
     }
 
@@ -30,8 +30,8 @@ const RedesSociaisBotao = (props) => {
             className={`mx-3 px-3 py-2 ${btnRedeSocial}`}
             variant="outline-secondary"
             onClick={() => window.open(linkExterno, '_blank')}>
-                <Image
-                    className="pe-3" src={icone}/> {props.texto} 
+                <Image className="pe-3" src={icone} draggable="false"/>
+                {props.texto} 
         </Button>
     )
 }

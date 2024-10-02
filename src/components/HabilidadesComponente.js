@@ -141,7 +141,7 @@ const HabilidadesComponente = (props) => {
             onClick={handleOnClick}>
 
             <Container className={`container-habilidade-dinamico ${containerAtivo ? 'container-ativo' : ''}`}>
-                <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`} src={habilidadeInfo.habilidade}/>
+                <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`} src={habilidadeInfo.habilidade} draggable="false"/>
             </Container>
         </Container>
     )
