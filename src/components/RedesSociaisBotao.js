@@ -22,12 +22,12 @@ const RedesSociaisBotao = (props) => {
     } else if(props.texto === 'Currículo'){
         icone = Curriculo
         btnRedeSocial = 'btn-curriculo'
-        customWidth = 'custom-width'
+        linkExterno = 'https://thalesondas-curriculum.netlify.app'
     }
 
     return(
         <Button
-            className={`mx-3 px-3 py-2 ${btnRedeSocial} ${customWidth}`}
+            className={`mx-3 px-3 py-2 ${btnRedeSocial}`}
             variant="outline-secondary"
             onClick={() => window.open(linkExterno, '_blank')}>
                 <Image
