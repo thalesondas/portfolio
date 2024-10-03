@@ -12,7 +12,8 @@ const projetos = [
     imagem: TelaBurger,
     tecnologias: ['JavaScript', 'React.js', 'React Bootstrap', 'Bootstrap', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB', 'Fetch API'],
     linkSite: 'https://rocknrollburger.vercel.app/',
-    linkGithub: 'https://github.com/thalesondas/burger'
+    linkGithub: 'https://github.com/thalesondas/burger',
+    delay: 250
   },
   {
     titulo: 'PokéDex',
@@ -20,7 +21,8 @@ const projetos = [
     imagem: TelaPokemon,
     tecnologias: ['JavaScript', 'React.js', 'React Bootstrap', 'Bootstrap', 'Redux Toolkit', 'Fetch API' ],
     linkSite: 'https://pokedex-pkmapi.netlify.app/',
-    linkGithub: 'https://github.com/thalesondas/reactjs-api-pokemon'
+    linkGithub: 'https://github.com/thalesondas/reactjs-api-pokemon',
+    delay: 400
   },
   {
     titulo: 'Satisfying.you',
@@ -28,7 +30,8 @@ const projetos = [
     imagem: TelaMobile,
     tecnologias: ['JavaScript', 'React Native', 'Redux Toolkit', 'Firebase'],
     linkSite: '',
-    linkGithub: 'https://github.com/thalesondas/projetomobile'
+    linkGithub: 'https://github.com/thalesondas/projetomobile',
+    delay: 550
   },
   {
     titulo: 'Dota 2',
@@ -36,7 +39,8 @@ const projetos = [
     imagem: TelaDota2,
     tecnologias: ['JavaScript', 'React.js', 'React Bootstrap', 'Bootstrap', 'Context API', 'Fetch API' ],
     linkSite: 'https://dota2-api.netlify.app/',
-    linkGithub: 'https://github.com/thalesondas/versao-api-dota2'
+    linkGithub: 'https://github.com/thalesondas/versao-api-dota2',
+    delay: 250
   }
 ];
 

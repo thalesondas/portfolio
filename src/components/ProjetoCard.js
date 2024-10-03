@@ -6,7 +6,7 @@ const ProjetoCard = ({ projeto }) => {
   const temSite = projeto.linkSite !== ''
 
   return(
-    <Card className="projeto-card m-2" data-aos="fade-right">
+    <Card className="projeto-card m-2" data-aos="fade-up" data-aos-delay={projeto.delay} data-aos-duration="1000">
       {temSite ? (
         <a href={projeto.linkSite} target="_blank" rel="noopener noreferrer">
           <Card.Img variant="top" src={projeto.imagem} alt={projeto.titulo} className="projeto-imagem" draggable="false" />
