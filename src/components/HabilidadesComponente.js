@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { Container, Image } from "react-bootstrap"
-import { useDispatch } from 'react-redux'
-import { setDescricao, setHabilidadeAtiva, setTitulo } from "../redux/reducer"
+import { useDispatch, useSelector } from 'react-redux'
+import { setDescricao, setHabilidadeAtiva, setTitulo, resetHabilidadeAtiva } from "../redux/reducer"
 import Html from '../images/html.svg'
 import Css from '../images/css.svg'
 import JavaScript from '../images/javascript.svg'
@@ -19,7 +19,7 @@ import '../assets/HabilidadesComponente.css'
 const HabilidadesComponente = (props) => {
 
     const dispatch = useDispatch();
-    const componenteRef = useRef(null);
+    const habilidadeAtivaGlobal = useSelector(state => state.descricao.habilidadeAtiva);
 
     const [estaAtiva, setEstaAtiva] = useState(false)
     const [containerAtivo, setContainerAtivo] = useState(false)
@@ -101,44 +101,64 @@ const HabilidadesComponente = (props) => {
 
     const habilidadeInfo = habilidadesMap[props.habilidade] || {}
 
+    // Reseta o estado local se a habilidade ativa global mudar
+    useEffect(() => {
+        if (habilidadeAtivaGlobal !== habilidadeInfo.habilidadeAtiva) {
+            setEstaAtiva(false);  // Desativa localmente se outra habilidade for clicada
+            setContainerAtivo(false);
+        }
+    }, [habilidadeAtivaGlobal, habilidadeInfo.habilidadeAtiva]);
+
     const handleOnClick = () => {
+        if(window.innerWidth > 946.98){
+            setEstaAtiva(false);
+            setContainerAtivo(false);
+        } else {
+            // Verifica se a habilidade ativa global é diferente da habilidade atual
+            if(habilidadeAtivaGlobal !== habilidadeInfo.habilidadeAtiva) {
+                dispatch(resetHabilidadeAtiva());
+                dispatch(setHabilidadeAtiva(habilidadeInfo.habilidadeAtiva));
+                dispatch(setDescricao(habilidadeInfo.descricao));
+                dispatch(setTitulo(habilidadeInfo.titulo));
+                setEstaAtiva(true);
+                setContainerAtivo(true);
+            }
 
-        dispatch(setHabilidadeAtiva(habilidadeInfo.habilidadeAtiva))
-        dispatch(setDescricao(habilidadeInfo.descricao));
-        dispatch(setTitulo(habilidadeInfo.titulo));
-        setEstaAtiva(true);
-        setContainerAtivo(true);
-
-        if(window.innerWidth < 946.98){
             document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 window.scrollBy({ top: -40, left: 0, behavior: 'smooth' });
             }, 400);
         }
+    };
+
+    const handleMouseOver = () => {
+        if(window.innerWidth > 946.98){
+            dispatch(setHabilidadeAtiva(habilidadeInfo.habilidadeAtiva))
+            dispatch(setDescricao(habilidadeInfo.descricao));
+            dispatch(setTitulo(habilidadeInfo.titulo));
+            setEstaAtiva(true);
+            setContainerAtivo(true);
+        }
     }
 
-    useEffect(() => {
-        const handleOnClickFora = () => {
-            if(componenteRef.current) {
-                dispatch(setTitulo('Saiba sobre a tecnologia'));
-                dispatch(setDescricao('Clique no ícone para saber sobre a tecnologia específica.'));
-                setEstaAtiva(false);
-                setContainerAtivo(false);
-            }
-        };
-        document.addEventListener("mousedown", handleOnClickFora);
-        return () => {
-            document.removeEventListener("mousedown", handleOnClickFora);
-        };
-    }, [dispatch, componenteRef]);
+    const handleMouseOut = () => {
+        if(window.innerWidth > 946.98){
+            dispatch(setHabilidadeAtiva(''))
+            dispatch(setDescricao('Passe o mouse (em dispositivos maiores) ou clique (em dispositivos menores) no ícone para saber sobre a tecnologia específica.'));
+            dispatch(setTitulo('Saiba sobre a tecnologia'));
+            setEstaAtiva(false);
+            setContainerAtivo(false);
+        }
+    }
 
     return(
         <Container
-            ref={componenteRef}
             data-aos="flip-left"
             data-aos-duration={props.duracaoAnimacao}
             className='container-habilidade-estatico'
-            onClick={handleOnClick}>
+            onClick={handleOnClick}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}>
 
             <Container className={`container-habilidade-dinamico ${containerAtivo ? 'container-ativo' : ''}`}>
                 <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`} src={habilidadeInfo.habilidade} draggable="false"/>
