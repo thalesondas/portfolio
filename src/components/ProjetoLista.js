@@ -10,7 +10,7 @@ const projetos = [
     titulo: "Rock 'n' Roll Burger",
     descricao: "Rock 'n' Roll Burger é um site interativo de uma hamburgueria fictícia, onde os usuários podem explorar o cardápio, adicionar itens ao carrinho e fazer pedidos de forma prática. O projeto combina tecnologias de front-end e back-end para oferecer uma experiência completa de navegação e gerenciamento de pedidos.",
     imagem: TelaBurger,
-    tecnologias: ['JavaScript', 'React.js', 'React Bootstrap', 'Bootstrap', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB', 'Fetch API', 'JWT'],
+    tecnologias: ['JavaScript', 'React.js', 'React Bootstrap', 'Bootstrap', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB', 'Fetch API', 'JWT', 'Redis'],
     linkSite: 'https://rocknrollburger.vercel.app/',
     linkGithub: 'https://github.com/thalesondas/burger',
     delay: 250
