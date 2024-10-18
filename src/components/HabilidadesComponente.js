@@ -14,6 +14,8 @@ import Ingles from '../images/ingles.svg'
 import Redux from '../images/redux.svg'
 import NodeJS from '../images/nodejs.svg'
 import Java from '../images/java.svg'
+import SpringBoot from '../images/springboot.svg'
+import Hibernate from '../images/hibernate.svg'
 import '../assets/HabilidadesComponente.css'
 
 const HabilidadesComponente = (props) => {
@@ -96,6 +98,18 @@ const HabilidadesComponente = (props) => {
             habilidadeAtiva: 'java-ativo',
             titulo: 'Java',
             descricao: 'Java é uma linguagem de programação orientada a objetos. É conhecida por sua portabilidade, segurança e robustez, sendo amplamente utilizada em aplicativos web, móveis (especialmente Android) e sistemas corporativos.'
+        },
+        springboot: {
+            habilidade: SpringBoot,
+            habilidadeAtiva: 'springboot-ativo',
+            titulo: 'Spring Boot',
+            descricao: 'Spring Boot é um framework Java que facilita a criação de aplicações web e microserviços, eliminando a necessidade de configurações complexas. Ele oferece configurações automáticas, um servidor embutido, e uma abordagem para criar APIs REST de forma rápida e eficiente.'
+        },
+        hibernate: {
+            habilidade: Hibernate,
+            habilidadeAtiva: 'hibernate-ativo',
+            titulo: 'JPA / Hibernate',
+            descricao: 'JPA (Java Persistence API) é uma especificação Java para mapeamento objeto-relacional (ORM), que facilita a interação entre objetos Java e bancos de dados relacionais. O Hibernate é uma implementação popular do JPA, oferecendo funcionalidades avançadas, como o gerenciamento automático de consultas SQL, cache de dados e controle de transações, permitindo persistir dados de forma eficiente e minimizando a necessidade de escrever SQL manualmente.'
         }
     };
 
@@ -161,7 +175,11 @@ const HabilidadesComponente = (props) => {
             onMouseOut={handleMouseOut}>
 
             <Container className={`container-habilidade-dinamico ${containerAtivo ? 'container-ativo' : ''}`}>
-                <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`} src={habilidadeInfo.habilidade} draggable="false"/>
+
+                <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`}
+                src={habilidadeInfo.habilidade}
+                draggable="false"/>
+
             </Container>
         </Container>
     )

@@ -73,6 +73,14 @@
     filter: invert(40%) sepia(94%) saturate(742%) hue-rotate(166deg) brightness(93%) contrast(94%);
 }
 
+.springboot-ativo{
+    filter: invert(63%) sepia(17%) saturate(1366%) hue-rotate(52deg) brightness(98%) contrast(88%);
+}
+
+.hibernate-ativo{
+    filter: invert(93%) sepia(7%) saturate(1745%) hue-rotate(358deg) brightness(80%) contrast(83%);
+}
+
 .container-habilidade-estatico .container-habilidade-dinamico:has([class$="-ativo"]){
     animation: quicar 1s ease-out;
     background-color: whitesmoke;
