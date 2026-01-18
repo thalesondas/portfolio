@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Row, Col, Nav, Navbar, Image } from 'react-bootstrap';
-import ProgrammerLogo from '../images/ProgrammerLogo.png';
-import '../assets/Header.css';
+import ProgrammerLogo from '../assets/images/ProgrammerLogo.png';
+import '../assets/styles/Header.css';
 
 const Header = () => {
 

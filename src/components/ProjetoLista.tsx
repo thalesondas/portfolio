@@ -1,11 +1,21 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import TelaBurger from '../images/TelaBurger.png'
-import TelaPokemon from '../images/TelaPokemon.png'
-import TelaMobile from '../images/TelaMobile.jpeg'
-import TelaDota2 from '../images/TelaDota2.png'
+import TelaBurger from '../assets/images/TelaBurger.png'
+import TelaPokemon from '../assets/images/TelaPokemon.png'
+import TelaMobile from '../assets/images/TelaMobile.jpeg'
+import TelaDota2 from '../assets/images/TelaDota2.png'
 import ProjetoCard from './ProjetoCard';
 
-const projetos = [
+export interface Projeto {
+  titulo: string;
+  descricao: string;
+  imagem: string;
+  tecnologias: string[];
+  linkSite: string;
+  linkGithub: string;
+  delay: number;
+}
+
+const projetos: Projeto[] = [
   {
     titulo: "Rock 'n' Roll Burger",
     descricao: "Rock 'n' Roll Burger é um site interativo de uma hamburgueria fictícia, onde os usuários podem explorar o cardápio, adicionar itens ao carrinho e fazer pedidos de forma prática. O projeto combina tecnologias de front-end e back-end para oferecer uma experiência completa de navegação e gerenciamento de pedidos.",

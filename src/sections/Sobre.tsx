@@ -1,10 +1,10 @@
 import { Container, Row, Col, Image } from "react-bootstrap"
 import TiltComponent from '../components/TiltComponent'
-import RedesSociaisBotao from "./RedesSociaisBotao"
-import Email from "../images/email.svg"
-import '../assets/MainSobre.css'
+import RedesSociaisBotao from "../components/RedesSociaisBotao"
+import Email from "../assets/images/email.svg"
+import '../assets/styles/MainSobre.css'
 
-const MainSobre = () => {
+const Sobre = () => {
 
     return(
         <Container id="sobre" className="main-sobre d-flex">
@@ -37,4 +37,4 @@ const MainSobre = () => {
     )
 }
 
-export default MainSobre
+export default Sobre

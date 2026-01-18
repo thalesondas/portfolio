@@ -1,19 +1,23 @@
 import { Button, Image } from "react-bootstrap";
-import '../assets/RedesSociaisFooter.css'
-import GitHub from '../images/github.svg'
-import LinkedIn from '../images/linkedin.svg'
+import '../assets/styles/RedesSociaisFooter.css'
+import GitHub from '../assets/images/github.svg'
+import LinkedIn from '../assets/images/linkedin.svg'
 
-const RedesSociaisFooter = (props) => {
+interface RedesSociaisFooterProps {
+  texto: 'LinkedIn' | 'GitHub';
+}
 
-    let icone
-    let btnRedeSocial
-    let linkExterno
+const RedesSociaisFooter = ({ texto }: RedesSociaisFooterProps) => {
 
-    if(props.texto === 'LinkedIn'){
+    let icone: string = ''
+    let btnRedeSocial: string = ''
+    let linkExterno: string = ''
+
+    if(texto === 'LinkedIn'){
         icone = LinkedIn
         btnRedeSocial = 'btn-linkedin'
         linkExterno = 'https://www.linkedin.com/in/thales-ondas/'
-    } else if(props.texto === 'GitHub'){
+    } else if(texto === 'GitHub'){
         icone = GitHub
         btnRedeSocial = 'btn-github'
         linkExterno = 'https://github.com/thalesondas/'

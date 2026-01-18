@@ -1,8 +1,8 @@
 import { Container, Row } from 'react-bootstrap';
-import '../assets/MainProjetos.css'
-import ProjetoLista from './ProjetoLista';
+import '../assets/styles/MainProjetos.css'
+import ProjetoLista from '../components/ProjetoLista';
 
-const MainProjetos = () => {
+const Projetos = () => {
     return(
         <Container id='projetos' className='main-projetos d-flex flex-column mt-5 mt-md-1 justify-content-center align-items-center'>
             <Row>
@@ -15,4 +15,4 @@ const MainProjetos = () => {
     )
 }
 
-export default MainProjetos;
+export default Projetos;

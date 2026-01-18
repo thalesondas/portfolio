@@ -1,7 +1,7 @@
 import { Col, Image } from "react-bootstrap";
-import RedesSociaisFooter from "./RedesSociaisFooter";
-import Email from '../images/email.svg'
-import '../assets/Footer.css'
+import RedesSociaisFooter from "../components/RedesSociaisFooter";
+import Email from '../assets/images/email.svg'
+import '../assets/styles/Footer.css'
 
 const Footer = () => {
     return(

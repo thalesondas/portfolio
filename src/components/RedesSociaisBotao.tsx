@@ -1,24 +1,28 @@
 import { Button, Image } from "react-bootstrap";
-import '../assets/RedesSociaisBotao.css'
-import GitHub from '../images/github.svg'
-import LinkedIn from '../images/linkedin.svg'
-import Curriculo from '../images/curriculo.svg'
+import '../assets/styles/RedesSociaisBotao.css'
+import GitHub from '../assets/images/github.svg'
+import LinkedIn from '../assets/images/linkedin.svg'
+import Curriculo from '../assets/images/curriculo.svg'
 
-const RedesSociaisBotao = (props) => {
+interface RedesSociaisBotaoProps {
+  texto: 'LinkedIn' | 'GitHub' | 'Currículo';
+}
 
-    let icone
-    let btnRedeSocial
-    let linkExterno
+const RedesSociaisBotao = ({ texto }: RedesSociaisBotaoProps) => {
 
-    if(props.texto === 'LinkedIn'){
+    let icone: string = ''
+    let btnRedeSocial: string = ''
+    let linkExterno: string = ''
+
+    if(texto === 'LinkedIn'){
         icone = LinkedIn
         btnRedeSocial = 'btn-linkedin'
         linkExterno = 'https://www.linkedin.com/in/thales-ondas/'
-    } else if(props.texto === 'GitHub'){
+    } else if(texto === 'GitHub'){
         icone = GitHub
         btnRedeSocial = 'btn-github'
         linkExterno = 'https://github.com/thalesondas/'
-    } else if(props.texto === 'Currículo'){
+    } else if(texto === 'Currículo'){
         icone = Curriculo
         btnRedeSocial = 'btn-curriculo custom-width'
         linkExterno = 'https://thalesondas-curriculum.netlify.app'
@@ -30,7 +34,7 @@ const RedesSociaisBotao = (props) => {
             variant="outline-secondary"
             onClick={() => window.open(linkExterno, '_blank')}>
                 <Image className="pe-3" src={icone} draggable="false"/>
-                {props.texto} 
+                {texto} 
         </Button>
     )
 }

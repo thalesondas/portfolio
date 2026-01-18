@@ -2,31 +2,49 @@ import { useState, useEffect } from "react"
 import { Container, Image } from "react-bootstrap"
 import { useDispatch, useSelector } from 'react-redux'
 import { setDescricao, setHabilidadeAtiva, setTitulo, resetHabilidadeAtiva } from "../redux/reducer"
-import Html from '../images/html.svg'
-import Css from '../images/css.svg'
-import JavaScript from '../images/javascript.svg'
-import ReactJS from '../images/reactjs.svg'
-import Bootstrap from '../images/bootstrap.svg'
-import PostgreSql from '../images/postgresql.svg'
-import MongoDB from '../images/mongodb.svg'
-import Git from '../images/git.svg'
-import Ingles from '../images/ingles.svg'
-import Redux from '../images/redux.svg'
-import NodeJS from '../images/nodejs.svg'
-import Java from '../images/java.svg'
-import SpringBoot from '../images/springboot.svg'
-import Hibernate from '../images/hibernate.svg'
-import '../assets/HabilidadesComponente.css'
+import Html from '../assets/images/html.svg'
+import Css from '../assets/images/css.svg'
+import JavaScript from '../assets/images/javascript.svg'
+import ReactJS from '../assets/images/reactjs.svg'
+import Bootstrap from '../assets/images/bootstrap.svg'
+import PostgreSql from '../assets/images/postgresql.svg'
+import MongoDB from '../assets/images/mongodb.svg'
+import Git from '../assets/images/git.svg'
+import Ingles from '../assets/images/ingles.svg'
+import Redux from '../assets/images/redux.svg'
+import NodeJS from '../assets/images/nodejs.svg'
+import Java from '../assets/images/java.svg'
+import SpringBoot from '../assets/images/springboot.svg'
+import Hibernate from '../assets/images/hibernate.svg'
+import '../assets/styles/HabilidadesComponente.css'
 
-const HabilidadesComponente = (props) => {
+interface RootState {
+  descricao: {
+    habilidadeAtiva: string;
+  }
+}
+
+interface HabilidadeInfo {
+  habilidade: string;
+  habilidadeAtiva: string;
+  titulo: string;
+  descricao: string;
+}
+
+interface HabilidadesComponenteProps {
+  habilidade: string;
+  duracaoAnimacao: string;
+}
+
+const HabilidadesComponente = ({ habilidade, duracaoAnimacao }: HabilidadesComponenteProps) => {
 
     const dispatch = useDispatch();
-    const habilidadeAtivaGlobal = useSelector(state => state.descricao.habilidadeAtiva);
+    const habilidadeAtivaGlobal = useSelector((state: RootState) => state.descricao.habilidadeAtiva);
 
     const [estaAtiva, setEstaAtiva] = useState(false)
     const [containerAtivo, setContainerAtivo] = useState(false)
 
-    const habilidadesMap = {
+    const habilidadesMap: Record<string, HabilidadeInfo> = {
         html: {
             habilidade: Html,
             habilidadeAtiva: 'html-ativo',
@@ -55,7 +73,7 @@ const HabilidadesComponente = (props) => {
             habilidade: Bootstrap,
             habilidadeAtiva: 'bootstrap-ativo',
             titulo: 'Bootstrap',
-            descricao: 'Bootstrap é um framework front-end de código aberto, desenvolvido pelo Twitter, que facilita a criação de interfaces web responsivas e estilizadas. Ele fornece uma coleção de componentes pré-construídos, como botões, formulários, barras de navegação, entre outros, além de um sistema de grid responsivo e classes CSS para estilização rápida e consistente.'
+            descricao: 'Bootstrap é um framework front-end de código aberto, desenvolvida pelo Twitter, que facilita a criação de interfaces web responsivas e estilizadas. Ele fornece uma coleção de componentes pré-construídos, como botões, formulários, barras de navegação, entre outros, além de um sistema de grid responsivo e classes CSS para estilização rápida e consistente.'
         },
         postgresql: {
             habilidade: PostgreSql,
@@ -113,7 +131,7 @@ const HabilidadesComponente = (props) => {
         }
     };
 
-    const habilidadeInfo = habilidadesMap[props.habilidade] || {}
+    const habilidadeInfo = habilidadesMap[habilidade] || ({} as HabilidadeInfo)
 
     // Reseta o estado local se a habilidade ativa global mudar
     useEffect(() => {
@@ -138,7 +156,7 @@ const HabilidadesComponente = (props) => {
                 setContainerAtivo(true);
             }
 
-            document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('habilidades')?.scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 window.scrollBy({ top: -40, left: 0, behavior: 'smooth' });
             }, 400);
@@ -168,7 +186,7 @@ const HabilidadesComponente = (props) => {
     return(
         <Container
             data-aos="flip-left"
-            data-aos-duration={props.duracaoAnimacao}
+            data-aos-duration={duracaoAnimacao}
             className='container-habilidade-estatico'
             onClick={handleOnClick}
             onMouseOver={handleMouseOver}
@@ -176,7 +194,7 @@ const HabilidadesComponente = (props) => {
 
             <Container className={`container-habilidade-dinamico ${containerAtivo ? 'container-ativo' : ''}`}>
 
-                <Image className={`img-habilidade ${props.habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`}
+                <Image className={`img-habilidade ${habilidade} ${estaAtiva ? habilidadeInfo.habilidadeAtiva : ''}`}
                 src={habilidadeInfo.habilidade}
                 draggable="false"/>
 

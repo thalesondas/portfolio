@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 import { Provider } from 'react-redux'
 import store from './redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header'
-import MainHome from './components/MainHome'
-import MainSobre from './components/MainSobre'
-import MainHabilidades from './components/MainHabilidades';
-import MainProjetos from './components/MainProjetos';
-import Footer from './components/Footer';
+import Header from './sections/Header'
+import Home from './sections/Home'
+import Sobre from './sections/Sobre'
+import Habilidades from './sections/Habilidades';
+import Projetos from './sections/Projetos';
+import Footer from './sections/Footer';
 import ParticlesComponent from './particles';
-import './App.css';
+import './assets/styles/App.css';
 
 const App = () => {
 
@@ -22,10 +22,10 @@ const App = () => {
       <Provider store={store}>
         <Header />
         <main>
-          <MainHome />
-          <MainSobre />
-          <MainHabilidades />
-          <MainProjetos />
+          <Home />
+          <Sobre />
+          <Habilidades />
+          <Projetos />
         </main>
         <Footer />
       </Provider>

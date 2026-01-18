@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import 'aos/dist/aos.css';
-import RedesSociaisBotao from './RedesSociaisBotao';
-import '../assets/MainHome.css'
-import FotoPerfil from '../images/FotoPerfil.jpeg';
+import RedesSociaisBotao from '../components/RedesSociaisBotao';
+import '../assets/styles/MainHome.css'
+import FotoPerfil from '../assets/images/FotoPerfil.jpeg';
 
-const MainHome = () => {
+const Home = () => {
 
     const [texto, setTexto] = useState('')
     const [index, setIndex] = useState(0)
@@ -73,4 +73,4 @@ const MainHome = () => {
     )
 }
 
-export default MainHome
+export default Home

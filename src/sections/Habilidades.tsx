@@ -1,12 +1,19 @@
 import { Container, Row, Col } from "react-bootstrap"
-import HabilidadesComponente from "./HabilidadesComponente"
+import HabilidadesComponente from "../components/HabilidadesComponente"
 import { useSelector } from 'react-redux' 
-import '../assets/MainHabilidades.css'
+import '../assets/styles/MainHabilidades.css'
 
-const MainHabilidades = () => {
+interface RootState {
+  descricao: {
+    descricao: string;
+    titulo: string;
+  }
+}
 
-    const descricao = useSelector(state => state.descricao.descricao)
-    const titulo = useSelector(state => state.descricao.titulo)
+const Habilidades = () => {
+
+    const descricao = useSelector((state: RootState) => state.descricao.descricao)
+    const titulo = useSelector((state: RootState) => state.descricao.titulo)
 
     return(
         <Container id="habilidades" className="main-habilidades d-flex flex-column justify-content-center align-items-center">
@@ -53,4 +60,4 @@ const MainHabilidades = () => {
     )
 }
 
-export default MainHabilidades
+export default Habilidades

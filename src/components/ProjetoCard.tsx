@@ -1,7 +1,13 @@
 import { Card, Badge } from 'react-bootstrap';
-import '../assets/ProjetoCard.css'
+import '../assets/styles/ProjetoCard.css'
+import { Projeto } from './ProjetoLista';
 
-const ProjetoCard = ({ projeto }) => {
+interface ProjetoCardProps {
+  projeto: Projeto;
+  i: number;
+}
+
+const ProjetoCard = ({ projeto }: ProjetoCardProps) => {
 
   const temSite = projeto.linkSite !== ''
 

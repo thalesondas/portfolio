@@ -1,20 +1,19 @@
 import AOS from 'aos';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo } from "react";
-import { loadSlim } from "@tsparticles/slim"; // Certifique-se de instalar este pacote.
+import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesComponent = (props) => {
+interface ParticlesComponentProps {
+  id: string;
+}
+
+const ParticlesComponent = ({ id }: ParticlesComponentProps) => {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-
       await loadSlim(engine);
     });
   }, []);
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
 
   const options = useMemo(
     () => ({
@@ -57,10 +56,10 @@ const ParticlesComponent = (props) => {
           width: 1,
         },
         move: {
-          direction: "none",
+          direction: "none" as const,
           enable: true,
           outModes: {
-            default: "bounce",
+            default: "bounce" as const,
           },
           random: true,
           speed: 0.7,
@@ -91,7 +90,7 @@ const ParticlesComponent = (props) => {
     AOS.init({ once: true });
   }, []);
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return <Particles id={id} options={options} />; 
 };
 
 export default ParticlesComponent;

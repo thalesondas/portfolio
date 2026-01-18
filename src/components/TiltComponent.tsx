@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 import Tilt from "react-parallax-tilt";
-import Programmer from '../images/Programmer.png'
+import Programmer from '../assets/images/Programmer.png'
  
 const TiltComponent = () => {
     return (
