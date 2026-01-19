@@ -2,9 +2,8 @@ import { useState, useEffect } from "react"
 import { Container, Image } from "react-bootstrap"
 import { useDispatch, useSelector } from 'react-redux'
 import { setDescricao, setHabilidadeAtiva, setTitulo, resetHabilidadeAtiva } from "../redux/reducer"
-import Html from '../assets/images/html.svg'
-import Css from '../assets/images/css.svg'
-import JavaScript from '../assets/images/javascript.svg'
+import TypeScript from '../assets/images/typescript.svg'
+import Python from '../assets/images/python.svg'
 import ReactJS from '../assets/images/reactjs.svg'
 import Bootstrap from '../assets/images/bootstrap.svg'
 import PostgreSql from '../assets/images/postgresql.svg'
@@ -13,9 +12,12 @@ import Git from '../assets/images/git.svg'
 import Ingles from '../assets/images/ingles.svg'
 import Redux from '../assets/images/redux.svg'
 import NodeJS from '../assets/images/nodejs.svg'
-import Java from '../assets/images/java.svg'
-import SpringBoot from '../assets/images/springboot.svg'
-import Hibernate from '../assets/images/hibernate.svg'
+import NestJS from '../assets/images/nestjs.svg'
+import Vue from '../assets/images/vue.svg'
+import Django from '../assets/images/django.svg'
+import Docker from '../assets/images/docker.svg'
+import Jest from '../assets/images/jest.svg'
+import Unittest from '../assets/images/unittest.svg'
 import '../assets/styles/HabilidadesComponente.css'
 
 interface RootState {
@@ -45,90 +47,102 @@ const HabilidadesComponente = ({ habilidade, duracaoAnimacao }: HabilidadesCompo
     const [containerAtivo, setContainerAtivo] = useState(false)
 
     const habilidadesMap: Record<string, HabilidadeInfo> = {
-        html: {
-            habilidade: Html,
-            habilidadeAtiva: 'html-ativo',
-            titulo: 'HTML',
-            descricao: 'HTML é a linguagem base para a criação de páginas da web. É uma linguagem de marcação que define a estrutura e o conteúdo de um site, como títulos, parágrafos, imagens, links e outros elementos.'
+        python: {
+            habilidade: Python,
+            habilidadeAtiva: 'python-ativo',
+            titulo: 'Python',
+            descricao: 'Python é uma linguagem de programação de alto nível, simples e versátil. É muito utilizada em áreas como ciência de dados, automação, back-end, machine learning e desenvolvimento web (com frameworks como Django e Flask).'
         },
-        css: {
-            habilidade: Css,
-            habilidadeAtiva: 'css-ativo',
-            titulo: 'CSS',
-            descricao: 'CSS é uma linguagem de estilo que define a aparência de páginas da web. Ela complementa o HTML, que define a estrutura e o conteúdo da página, fornecendo controle sobre a apresentação visual, como cores, fontes, layout, posicionamento e outros aspectos estéticos.'
+        typescript: {
+            habilidade: TypeScript,
+            habilidadeAtiva: 'typescript-ativo',
+            titulo: 'TypeScript',
+            descricao: 'TypeScript adiciona tipos estáticos e recursos avançados ao JavaScript, ajudando a melhorar a legibilidade, a qualidade e a escalabilidade do código, especialmente em projetos grandes.'
         },
-        javascript: {
-            habilidade: JavaScript,
-            habilidadeAtiva: 'javascript-ativo',
-            titulo: 'JavaScript',
-            descricao: 'JavaScript é uma linguagem de programação que adiciona interatividade e funcionalidade avançada às páginas da web. Ela complementa o HTML e CSS, permitindo criar sites dinâmicos, responsivos e interativos com o usuário.'
-        },
-        reactjs: {
-            habilidade: ReactJS,
-            habilidadeAtiva: 'reactjs-ativo',
-            titulo: 'React.js',
-            descricao: 'ReactJS é uma biblioteca JavaScript de código aberto, desenvolvida pelo Facebook, para a construção de interfaces de usuário (UI). Ele é amplamente utilizado para criar aplicações web dinâmicas e de alta performance. React adota uma abordagem baseada em componentes, onde a interface do usuário é dividida em pequenos blocos reutilizáveis, cada um com sua própria lógica e estado.'
-        },
-        bootstrap: {
-            habilidade: Bootstrap,
-            habilidadeAtiva: 'bootstrap-ativo',
-            titulo: 'Bootstrap',
-            descricao: 'Bootstrap é um framework front-end de código aberto, desenvolvida pelo Twitter, que facilita a criação de interfaces web responsivas e estilizadas. Ele fornece uma coleção de componentes pré-construídos, como botões, formulários, barras de navegação, entre outros, além de um sistema de grid responsivo e classes CSS para estilização rápida e consistente.'
-        },
-        postgresql: {
-            habilidade: PostgreSql,
-            habilidadeAtiva: 'postgresql-ativo',
-            titulo: 'PostgreSQL',
-            descricao: 'PostgreSQL é um sistema de gerenciamento de banco de dados relacional (SGBD) de código aberto e multiplataforma, conhecido por sua confiabilidade, robustez e recursos avançados. Ele é uma das principais opções para empresas e organizações que exigem um banco de dados poderoso, seguro e escalável.'
-        },
-        mongodb: {
-            habilidade: MongoDB,
-            habilidadeAtiva: 'mongodb-ativo',
-            titulo: 'MongoDB',
-            descricao: 'O MongoDB é um sistema de gerenciamento de banco de dados NoSQL de código aberto e multiplataforma, projetado para armazenar, consultar e gerenciar grandes volumes de dados não estruturados ou semiestruturados. Ele é uma ótima opção para aplicações que exigem flexibilidade, escalabilidade e alto desempenho para lidar com dados dinâmicos e em constante mudança.'
-        },
-        git: {
-            habilidade: Git,
-            habilidadeAtiva: 'git-ativo',
-            titulo: 'Git',
-            descricao: 'Git é um sistema de controle de versão distribuído, projetado para facilitar o gerenciamento de projetos de desenvolvimento de software. Ele permite que várias pessoas colaborem no mesmo projeto, acompanhem as alterações no código-fonte e coordenem o trabalho de forma eficiente. O Git é amplamente utilizado na indústria de software devido à sua velocidade, eficiência e robustez.'
-        },
-        ingles: {
-            habilidade: Ingles,
-            habilidadeAtiva: 'ingles-ativo',
-            titulo: 'Inglês',
-            descricao: 'O inglês se consolidou como a língua franca global, exercendo um papel fundamental na comunicação internacional, no acesso à informação e no desenvolvimento profissional e pessoal.'
-        },
-        redux: {
-            habilidade: Redux,
-            habilidadeAtiva: 'redux-ativo',
-            titulo: 'Redux Toolkit',
-            descricao: 'Redux é uma biblioteca de gerenciamento de estado previsível para aplicações JavaScript, especialmente aquelas construídas com bibliotecas como React. Ele centraliza o estado da aplicação em um único objeto chamado "store", permitindo que diferentes componentes acessem e atualizem o estado de maneira previsível através de "ações" e "reduzidores".'
+        nestjs: {
+            habilidade: NestJS,
+            habilidadeAtiva: 'nestjs-ativo',
+            titulo: 'NestJS',
+            descricao: 'NestJS é um framework back-end para Node.js que utiliza TypeScript e uma arquitetura modular. Ele facilita a criação de APIs e micro serviços escaláveis e bem estruturados.'
         },
         nodejs: {
             habilidade: NodeJS,
             habilidadeAtiva: 'nodejs-ativo',
             titulo: 'Node.js',
-            descricao: 'Node.js é um ambiente de execução JavaScript que permite executar código JavaScript no lado do servidor. É conhecido por sua alta performance e eficiência em aplicações em tempo real, como chats e jogos, devido à sua arquitetura assíncrona e orientada a eventos. Node.js é amplamente utilizado para construir APIs, serviços web e aplicações escaláveis.'
+            descricao: 'Node.js é um ambiente de execução JavaScript voltado para o back-end. Ele se destaca por sua performance e pelo modelo assíncrono e orientado a eventos, sendo ideal para aplicações em tempo real e APIs escaláveis.'
         },
-        java: {
-            habilidade: Java,
-            habilidadeAtiva: 'java-ativo',
-            titulo: 'Java',
-            descricao: 'Java é uma linguagem de programação orientada a objetos. É conhecida por sua portabilidade, segurança e robustez, sendo amplamente utilizada em aplicativos web, móveis (especialmente Android) e sistemas corporativos.'
+        django: {
+            habilidade: Django,
+            habilidadeAtiva: 'django-ativo',
+            titulo: 'Django',
+            descricao: 'Django é um framework web para Python focado em produtividade e segurança. Ele segue o padrão MVC e oferece ferramentas integradas como ORM, autenticação, administração e gerenciamento de rotas.'
         },
-        springboot: {
-            habilidade: SpringBoot,
-            habilidadeAtiva: 'springboot-ativo',
-            titulo: 'Spring Boot',
-            descricao: 'Spring Boot é um framework Java que facilita a criação de aplicações web e microserviços, eliminando a necessidade de configurações complexas. Ele oferece configurações automáticas, um servidor embutido, e uma abordagem para criar APIs REST de forma rápida e eficiente.'
+        reactjs: {
+            habilidade: ReactJS,
+            habilidadeAtiva: 'reactjs-ativo',
+            titulo: 'React.js',
+            descricao: 'React é uma biblioteca JavaScript para construção de interfaces usando uma abordagem baseada em componentes. Ele é amplamente utilizado para criar aplicações dinâmicas, rápidas e reutilizáveis.'
         },
-        hibernate: {
-            habilidade: Hibernate,
-            habilidadeAtiva: 'hibernate-ativo',
-            titulo: 'JPA / Hibernate',
-            descricao: 'JPA (Java Persistence API) é uma especificação Java para mapeamento objeto-relacional (ORM), que facilita a interação entre objetos Java e bancos de dados relacionais. O Hibernate é uma implementação popular do JPA, oferecendo funcionalidades avançadas, como o gerenciamento automático de consultas SQL, cache de dados e controle de transações, permitindo persistir dados de forma eficiente e minimizando a necessidade de escrever SQL manualmente.'
-        }
+        vuejs: {
+            habilidade: Vue,
+            habilidadeAtiva: 'vuejs-ativo',
+            titulo: 'Vue.js',
+            descricao: 'Vue.js é um framework JavaScript focado na construção de interfaces reativas. Ele combina simplicidade com boa performance e uma curva de aprendizado suave, sendo muito usado em SPAs.'
+        },
+        bootstrap: {
+            habilidade: Bootstrap,
+            habilidadeAtiva: 'bootstrap-ativo',
+            titulo: 'Bootstrap',
+            descricao: 'Bootstrap é um framework front-end com componentes pré-construídos e grid responsivo. Ele ajuda a criar interfaces consistentes e adaptáveis com menos esforço de estilização.'
+        },
+        postgresql: {
+            habilidade: PostgreSql,
+            habilidadeAtiva: 'postgresql-ativo',
+            titulo: 'PostgreSQL',
+            descricao: 'PostgreSQL é um banco de dados relacional open-source, conhecido pela robustez, segurança e suporte a recursos avançados. Ele é amplamente utilizado em sistemas corporativos e aplicações que exigem confiabilidade.'
+        },
+        mongodb: {
+            habilidade: MongoDB,
+            habilidadeAtiva: 'mongodb-ativo',
+            titulo: 'MongoDB',
+            descricao: 'MongoDB é um banco de dados NoSQL orientado a documentos, ideal para sistemas que lidam com dados dinâmicos e em grande volume, oferecendo flexibilidade e alta escalabilidade.'
+        },
+        redux: {
+            habilidade: Redux,
+            habilidadeAtiva: 'redux-ativo',
+            titulo: 'Redux Toolkit',
+            descricao: 'Redux Toolkit é uma ferramenta para gerenciamento de estado previsível, simplificando a configuração do Redux e reduzindo código repetitivo, especialmente em aplicações React.'
+        },
+        ingles: {
+            habilidade: Ingles,
+            habilidadeAtiva: 'ingles-ativo',
+            titulo: 'Inglês',
+            descricao: 'O inglês é a principal língua utilizada em tecnologia, negócios e ciência, sendo essencial para o acesso ao conhecimento e oportunidades globais.'
+        },
+        git: {
+            habilidade: Git,
+            habilidadeAtiva: 'git-ativo',
+            titulo: 'Git',
+            descricao: 'Git é um sistema de controle de versão distribuído que facilita a colaboração entre desenvolvedores, permitindo acompanhar histórico de mudanças e organizar contribuições.'
+        },
+        docker: {
+            habilidade: Docker,
+            habilidadeAtiva: 'docker-ativo',
+            titulo: 'Docker',
+            descricao: 'Docker é uma plataforma de containers que permite empacotar aplicações com suas dependências, garantindo execução consistente em qualquer ambiente.'
+        },
+        jest: {
+            habilidade: Jest,
+            habilidadeAtiva: 'jest-ativo',
+            titulo: 'Jest',
+            descricao: 'Jest é um framework de testes para aplicações JavaScript, focado em simplicidade e velocidade. É amplamente usado para testar aplicações React e bibliotecas front-end.'
+        },
+        unittest: {
+            habilidade: Unittest,
+            habilidadeAtiva: 'unittest-ativo',
+            titulo: 'Unittest',
+            descricao: 'Unittest é o framework de testes padrão da biblioteca padrão do Python, permitindo criar testes unitários de forma organizada e modular.'
+        },
     };
 
     const habilidadeInfo = habilidadesMap[habilidade] || ({} as HabilidadeInfo)

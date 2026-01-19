@@ -23,28 +23,28 @@ const Habilidades = () => {
             <Row className="row-habilidades">
                 <Col className="main-habilidades-col1 d-flex justify-content-center align-items-center">
                     <Row>
-                        <HabilidadesComponente duracaoAnimacao='2000' habilidade='html'/>
-                        <HabilidadesComponente duracaoAnimacao='2300' habilidade='nodejs'/>
-                        <HabilidadesComponente duracaoAnimacao='2500' habilidade='java'/>
-                        <HabilidadesComponente duracaoAnimacao='900' habilidade='mongodb'/>
+                        <HabilidadesComponente duracaoAnimacao='2000' habilidade='python'/>
+                        <HabilidadesComponente duracaoAnimacao='2300' habilidade='django'/>
+                        <HabilidadesComponente duracaoAnimacao='2500' habilidade='postgresql'/>
+                        <HabilidadesComponente duracaoAnimacao='900' habilidade='git'/>
                     </Row>
                     <Row>
-                        <HabilidadesComponente duracaoAnimacao='2200' habilidade='css'/>
-                        <HabilidadesComponente duracaoAnimacao='1500' habilidade='bootstrap'/>
-                        <HabilidadesComponente duracaoAnimacao='1000' habilidade='springboot'/>
-                        <HabilidadesComponente duracaoAnimacao='1600' habilidade='postgresql'/>
+                        <HabilidadesComponente duracaoAnimacao='2200' habilidade='typescript'/>
+                        <HabilidadesComponente duracaoAnimacao='1500' habilidade='reactjs'/>
+                        <HabilidadesComponente duracaoAnimacao='1000' habilidade='mongodb'/>
+                        <HabilidadesComponente duracaoAnimacao='1600' habilidade='docker'/>
                     </Row>
                     <Row>
-                        <HabilidadesComponente duracaoAnimacao='1700' habilidade='javascript'/>
-                        <HabilidadesComponente duracaoAnimacao='1000' habilidade='redux'/>
-                        <HabilidadesComponente duracaoAnimacao='1300' habilidade='hibernate'/>
-                        <Container style={{ width: '109px', height: '136px' }} />
+                        <HabilidadesComponente duracaoAnimacao='1700' habilidade='nestjs'/>
+                        <HabilidadesComponente duracaoAnimacao='1000' habilidade='vuejs'/>
+                        <HabilidadesComponente duracaoAnimacao='1300' habilidade='redux'/>
+                        <HabilidadesComponente duracaoAnimacao='2000' habilidade='jest'/>
                     </Row>
                     <Row>
-                        <HabilidadesComponente duracaoAnimacao='1100' habilidade='reactjs'/>
-                        <HabilidadesComponente duracaoAnimacao='1900' habilidade='git'/>
+                        <HabilidadesComponente duracaoAnimacao='1100' habilidade='nodejs'/>
+                        <HabilidadesComponente duracaoAnimacao='1900' habilidade='bootstrap'/>
                         <HabilidadesComponente duracaoAnimacao='800' habilidade='ingles'/>
-                        <Container style={{ width: '109px', height: '136px' }} />
+                        <HabilidadesComponente duracaoAnimacao='1500' habilidade='unittest'/>
                     </Row>
                 </Col>
                 <Col className="main-habilidades-col2 d-flex flex-column justify-content-center align-items-center">

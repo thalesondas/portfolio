@@ -25,6 +25,39 @@
 }
 
 /* Códigos abaixo para fazer a mudança de cor na imagem para cada tipo de linguagem de programação */
+
+.python-ativo{
+    filter: invert(92%) sepia(63%) saturate(1255%) hue-rotate(319deg) brightness(102%) contrast(102%);
+}
+
+.typescript-ativo{
+    filter: invert(41%) sepia(100%) saturate(416%) hue-rotate(171deg) brightness(91%) contrast(85%);
+}
+
+.nestjs-ativo{
+    filter: invert(27%) sepia(46%) saturate(3834%) hue-rotate(328deg) brightness(90%) contrast(95%);
+}
+
+.django-ativo{
+    filter: invert(13%) sepia(8%) saturate(5431%) hue-rotate(109deg) brightness(95%) contrast(89%);
+}
+
+.vuejs-ativo{
+    filter: invert(66%) sepia(24%) saturate(850%) hue-rotate(102deg) brightness(91%) contrast(89%);
+}
+
+.docker-ativo{
+    filter: invert(59%) sepia(52%) saturate(4479%) hue-rotate(182deg) brightness(97%) contrast(93%);
+}
+
+.jest-ativo{
+    filter: invert(37%) sepia(9%) saturate(2920%) hue-rotate(295deg) brightness(91%) contrast(90%);
+}
+
+.unittest-ativo{
+    filter: invert(38%) sepia(17%) saturate(1777%) hue-rotate(213deg) brightness(91%) contrast(84%);
+}
+
 .html-ativo{
     filter: invert(61%) sepia(87%) saturate(5641%) hue-rotate(351deg) brightness(97%) contrast(103%);
 }
