@@ -16,17 +16,20 @@ const About = () => {
                 <Col data-aos="fade-left" data-aos-duration="1500" md={6} lg={7} className="main-about-col2 d-flex flex-column justify-content-center mt-5 mt-md-0">
                     <h2 data-aos="fade-down" data-aos-duration="1700" className="mb-4"><span className="barra-vermelha">|</span> Sobre mim</h2>
                     <p>
-                        &emsp;Olá! Estou me formando em Análise e Desenvolvimento de Sistemas pela UTFPR de Cornélio Procópio,
-                        onde adquiri conhecimento em várias linguagens de programação,
-                        linguagens de marcação e estilização, bancos de dados, bibliotecas e frameworks, etc.
+                        &emsp;Sou desenvolvedor de software formado em Análise e Desenvolvimento de Sistemas pela UTFPR de Cornélio Procópio, 
+                        com experiência no desenvolvimento de aplicações web e APIs em ambientes produtivos.
                     </p>
                     <p>
-                        &emsp;Além de aprimorar alguns desses conhecimentos e aprender novas tecnologias por
-                        meio de cursos online gratuitos e da plataforma Udemy.
+                        &emsp;Atuo principalmente com JavaScript e TypeScript, 
+                        desenvolvendo soluções front-end com Next.js/React e Vue.js e back-end com NestJS e Django (Django REST Framework), 
+                        com persistência de dados em PostgreSQL, utilizando TypeORM.
+                    </p>
+                    <p>
+                        &emsp;Tenho experiência com testes automatizados (Jest, Unittest e BDD com Gherkin) e noções de DevOps, 
+                        utilizando Docker, Kubernetes e pipelines de CI/CD com GitHub Actions, além de deploy na DigitalOcean.
                     </p>
                     <p className="mb-5">
-                        &emsp;Estou em busca da minha primeira oportunidade de trabalho nessa área para poder continuar aprimorando 
-                        minhas habilidades e poder ajudar a empresa com meus conhecimentos.
+                        &emsp;Possuo inglês intermediário/avançado (B2-C1) e valorizo código limpo, boas práticas e aprendizado contínuo.
                     </p>
                     <Container className="d-flex justify-content-center">
                         <SocialMediaButton text='Currículo'/>
