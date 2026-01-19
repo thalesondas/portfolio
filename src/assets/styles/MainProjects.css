@@ -1,4 +1,4 @@
-.main-projetos{
+.main-projects{
     min-height: 100vh;
     width: 100%;
     z-index: -1;
@@ -9,8 +9,8 @@
     color: red;
 }
 
-#projetos h3,
-#projetos p{
+#projects h3,
+#projects p{
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
                  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }

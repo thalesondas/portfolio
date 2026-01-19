@@ -1,19 +1,19 @@
 import { Container, Row, Col, Image } from "react-bootstrap"
 import TiltComponent from '../components/TiltComponent'
-import RedesSociaisBotao from "../components/RedesSociaisBotao"
+import SocialMediaButton from "../components/SocialMediaButton"
 import Email from "../assets/images/email.svg"
-import '../assets/styles/MainSobre.css'
+import '../assets/styles/MainAbout.css'
 
-const Sobre = () => {
+const About = () => {
 
     return(
-        <Container id="sobre" className="main-sobre d-flex">
+        <Container id="about" className="main-about d-flex">
             <Row>
-                <Col data-aos="fade-right" data-aos-duration="1500" md={6} lg={5} className="main-sobre-col1 d-flex flex-column justify-content-center align-items-start align-items-sm-center align-items-md-start align-items-xl-center mt-5 mt-md-0 ms-4 ms-sm-0">
+                <Col data-aos="fade-right" data-aos-duration="1500" md={6} lg={5} className="main-about-col1 d-flex flex-column justify-content-center align-items-start align-items-sm-center align-items-md-start align-items-xl-center mt-5 mt-md-0 ms-4 ms-sm-0">
                     <TiltComponent />
                     <p className="mt-5 ms-3 ms-lg-5"> <Image className='img-email pe-2' src={Email} draggable="false" /> <span className="span-email">thalesondas0@gmail.com</span></p>
                 </Col>
-                <Col data-aos="fade-left" data-aos-duration="1500" md={6} lg={7} className="main-sobre-col2 d-flex flex-column justify-content-center mt-5 mt-md-0">
+                <Col data-aos="fade-left" data-aos-duration="1500" md={6} lg={7} className="main-about-col2 d-flex flex-column justify-content-center mt-5 mt-md-0">
                     <h2 data-aos="fade-down" data-aos-duration="1700" className="mb-4"><span className="barra-vermelha">|</span> Sobre mim</h2>
                     <p>
                         &emsp;Olá! Estou me formando em Análise e Desenvolvimento de Sistemas pela UTFPR de Cornélio Procópio,
@@ -29,7 +29,7 @@ const Sobre = () => {
                         minhas habilidades e poder ajudar a empresa com meus conhecimentos.
                     </p>
                     <Container className="d-flex justify-content-center">
-                        <RedesSociaisBotao texto='Currículo'/>
+                        <SocialMediaButton text='Currículo'/>
                     </Container>
                 </Col>
             </Row>
@@ -37,4 +37,4 @@ const Sobre = () => {
     )
 }
 
-export default Sobre
+export default About

@@ -1,5 +1,5 @@
 import { Col, Image } from "react-bootstrap";
-import RedesSociaisFooter from "../components/RedesSociaisFooter";
+import SocialMediaFooter from "../components/SocialMediaFooter";
 import Email from '../assets/images/email.svg'
 import '../assets/styles/Footer.css'
 
@@ -10,8 +10,8 @@ const Footer = () => {
                 <p><Image className='img-email pe-2' src={Email} draggable="false" /> <span className="span-email">thalesondas0@gmail.com</span></p>
             </Col>
             <Col className="d-flex justify-content-center align-items-center">
-                <RedesSociaisFooter texto='LinkedIn'/>
-                <RedesSociaisFooter texto='GitHub'/>
+                <SocialMediaFooter text='LinkedIn'/>
+                <SocialMediaFooter text='GitHub'/>
             </Col>
         </footer>
     )

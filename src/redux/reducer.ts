@@ -1,24 +1,24 @@
 import { createSlice, combineReducers } from '@reduxjs/toolkit';
 
-const descricaoSlice = createSlice({
-    name: 'descricao',
+const descriptionSlice = createSlice({
+    name: 'description',
     initialState: {
-        descricao: 'Passe o mouse (em dispositivos maiores) ou clique (em dispositivos menores) no ícone para saber sobre a tecnologia específica.',
-        titulo: 'Saiba sobre a tecnologia',
-        habilidadeAtiva: ''
+        description: 'Passe o mouse (em dispositivos maiores) ou clique (em dispositivos menores) no ícone para saber sobre a tecnologia específica.',
+        title: 'Saiba sobre a tecnologia',
+        activeSkill: ''
     },
     reducers: {
-        setDescricao: (state, action) => { state.descricao = action.payload },
-        setTitulo: (state, action) => { state.titulo = action.payload },
-        setHabilidadeAtiva: (state, action) => { state.habilidadeAtiva = action.payload },
-        resetHabilidadeAtiva: (state) => { state.habilidadeAtiva = '' }
+        setDescription: (state, action) => { state.description = action.payload },
+        setTitle: (state, action) => { state.title = action.payload },
+        setActiveSkill: (state, action) => { state.activeSkill = action.payload },
+        resetActiveSkill: (state) => { state.activeSkill = '' }
     }
 })
 
 const rootReducer = combineReducers({
-    descricao: descricaoSlice.reducer
+    description: descriptionSlice.reducer
 })
 
-export const { setDescricao, setTitulo, setHabilidadeAtiva, resetHabilidadeAtiva } = descricaoSlice.actions;
+export const { setDescription, setTitle, setActiveSkill, resetActiveSkill } = descriptionSlice.actions;
 
 export default rootReducer;

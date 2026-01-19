@@ -2,16 +2,16 @@
     font-size: 80px;
 }
 
-#home .span-texto{
+#home .text-span{
     display: inline-block;
 }
 
-#home .span-cursor{
+#home .cursor-span{
     display: inline-block;
     margin: 15px 0 30px 0;
 }
 
-.span-circulo{
+.circle-span{
     font-size: 55px !important;
     color: #9e0008;
 }
@@ -25,10 +25,10 @@
     z-index: -1;
 }
 
-.bolha{
+.bubble{
     width: 22rem;
     box-shadow: 0px 0px 21px 6px white;
-    animation: bolhaMexendo 10s linear infinite;
+    animation: bubbleMoving 10s linear infinite;
 }
 
 .main-home-col1 h1{
@@ -37,11 +37,11 @@
     line-height: 51px;
 }
 
-.cursor-digitacao{
-    animation: piscar 1s linear infinite;
+.typing-cursor{
+    animation: blink 1s linear infinite;
 }
 
-@keyframes bolhaMexendo{
+@keyframes bubbleMoving{
     0%, 100% {
         border-radius: 100% 50% 60% 90% / 70% 50% 100% 50%;
         transform: translateY(0);
@@ -60,7 +60,7 @@
     }
 }
 
-@keyframes piscar {
+@keyframes blink {
     0%{
         opacity: 1;
     }
@@ -73,7 +73,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .bolha{
+    .bubble{
         width: 18rem;
     }
 }
@@ -82,7 +82,7 @@
     #home{
         padding-top: 100px;
     }
-    .bolha{
+    .bubble{
         margin-top: 45px;
         width: 25rem;
     }
